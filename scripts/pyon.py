@@ -1,12 +1,84 @@
 from collections import namedtuple
+from dataclasses import dataclass
 import json
 import copy
+import threading
+import time
 
 
-# Converts the object to a dictionary
-# Aslo converts every attribute of the object which were objects
-# Makes the object saveable to a JSON
+"""
+PYON VERSION 0.2.0
+"""
+
+
+class object_stream:
+    """
+    ## Constant data-streaming from a json file.\n
+    This can help reduce refresh/compilation times when modifying objects.\n
+    To start the `watcher` just do: 
+    ```py
+    x = object_stream("file.json")
+    x.start()
+    ```
+    To stop streaming data:
+    ```py
+    x.stop()
+    ```
+    To read the objects:
+    ```py
+    x.get_objects()
+    ```
+    """
+    def __init__(self, path: str, debug: bool = True, refresh_time: int = 0.25):
+        self.debug = debug
+        self.refresh_time = refresh_time
+        self.__path = path
+        self.__watch_thread = threading.Thread(target=self.__compare_and_execute)
+        self.__run = True
+        self.string_cache = self.__read_string_cache()
+        self.__object_cache = object()
+        self.__set_object_cache(self.string_cache)
+        
+        
+    def __read_string_cache(self):
+        with open(self.__path, "r") as read_file:
+            return read_file.read()
+    
+    def __set_object_cache(self, new_cache: str):
+        try:
+            self.__object_cache = loads(new_cache)
+        except json.decoder.JSONDecodeError:
+            if (self.debug):
+                print("Invalid JSON data... Retrying...")
+    
+    def __compare_and_execute(self):
+        while self.__run:
+            new_cache = self.__read_string_cache()
+                
+            if (self.string_cache != new_cache):
+                self.string_cache = new_cache
+                print(new_cache)
+                self.__set_object_cache(new_cache)
+                        
+            time.sleep(self.refresh_time)
+    
+    def get_objects(self):
+        return self.__object_cache
+    
+    def start(self):
+        self.__run = True
+        self.__watch_thread.start()
+    
+    def stop(self):
+        self.__run = False
+
+
 def __object_to_dict(object):
+    """
+    Converts the object to a dictionary, makes it saveable to a JSON.
+    Aslo converts every attribute of the object which were objects\n
+    `Returns` a dict
+    """
     accepted_datatypes: list = [int, str, chr, float, complex, bool, dict, tuple, list]
     new_dict: dict = {}
 
@@ -38,10 +110,12 @@ def __object_to_dict(object):
     return new_dict
 
 
-# Converts the saved dictionary back to the original object
-# WARNING: IT WILL NOT CONVERT ANY DICTIONARIES WHICH HAVE NOT BEEN SAVED WITH: "__object_to_dict"
-# Returns the original object
 def __dict_to_object(olddict):
+    """
+    Converts the saved dictionary back to the original object
+    #### WARNING: IT WILL NOT CONVERT ANY DICTIONARIES WHICH HAVE NOT BEEN SAVED WITH: "__object_to_dict"\n
+    `Returns` the original object
+    """
     class_type: str = ""
     params: dict = {}
 
@@ -79,35 +153,49 @@ def __dict_to_object(olddict):
         return olddict
     
 
-
-# Loades the data from the _json file
 def load_json(_json: str) -> dict: 
+    """
+    Loades the data from the _json file
+    """
     with open(_json, 'r', encoding="utf-8") as read_file:
         loaddata = json.load(read_file)
         return loaddata
 
-# Saves the _json file with new data
 def dump_json(_json: str, data: str):
+    """
+    Saves the _json file with new data
+    """
     with open(_json, "w", encoding="utf-8") as write_file:
         json.dump(data, write_file, indent=4, ensure_ascii=False)
         write_file.write("\n")
 
-# Works the same as the json.dumps function, but exepts objects as data
 def dump(data, file: str, indent: int = 4):
+    """
+    Works the same as the json.dumps function, but exepts objects as data
+    """
     new_data: dict = __object_to_dict(data) 
     with open(file, "w", encoding="utf-8") as write_file:
         json.dump(new_data, write_file, indent=indent, ensure_ascii=False)
         write_file.write("\n")
     pass
 
-# Loads the json file, and converts all the dictionaries which were objects
 def load(file: str):
+    """
+    Loads the json file, and converts all the dictionaries which were objects
+    """
     with open(file, 'r', encoding="utf-8") as read_file:
         loaddata = json.load(read_file)
         return __dict_to_object(loaddata)
 
 def dumps(data):
+    """
+    Convert an object into a JSON saveable dict.
+    #### THIS ALSO CONVERTS EVERY SUB-OBJECT
+    """
     return __object_to_dict(data)
 
 def loads(data):
+    """
+    Convert the saved JSON string back into objects.
+    """
     return __dict_to_object(json.loads(data))
