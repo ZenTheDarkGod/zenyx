@@ -34,6 +34,8 @@ class object_stream:
         self.refresh_time = refresh_time
         self.__path = path
         self.__watch_thread = threading.Thread(target=self.__compare_and_execute)
+        self.__watch_thread.setDaemon(True)
+        self.__on_change_callbacks: list[callable] = []
         self.__run = True
         self.string_cache = self.__read_string_cache()
         self.__object_cache = object()
@@ -47,6 +49,7 @@ class object_stream:
     def __set_object_cache(self, new_cache: str):
         try:
             self.__object_cache = loads(new_cache)
+            self.__call_change_callbacks()
         except json.decoder.JSONDecodeError:
             if (self.debug):
                 print("Invalid JSON data... Retrying...")
@@ -57,13 +60,19 @@ class object_stream:
                 
             if (self.string_cache != new_cache):
                 self.string_cache = new_cache
-                print(new_cache)
                 self.__set_object_cache(new_cache)
                         
             time.sleep(self.refresh_time)
     
+    def __call_change_callbacks(self):
+        for callback in self.__on_change_callbacks:
+            callback()
+    
     def get_objects(self):
         return self.__object_cache
+    
+    def on_change(self, callback: callable):
+        self.__on_change_callbacks.append(callback)
     
     def start(self):
         self.__run = True
