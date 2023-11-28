@@ -1,6 +1,6 @@
 """
 # pyon
-version 0.2.0\n
+version 0.3.1\n
 
 ## python obejct notation
 Enables convertion from objects into JSON and back. 
