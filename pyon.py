@@ -1,15 +1,50 @@
+"""
+# pyon
+version 0.2.0\n
+
+## python obejct notation
+Enables convertion from objects into JSON and back. 
+Just use the common JSON functions such as:
+ - `dump`: save an `object`, a `dict` or a `list` into a `.json` file
+ - `load`: load an `object`, a `dict` or a `list` from a `.json` file
+ - `dumps`: convert an `object`, a `dict` or a `list` into a JSON object (string)
+ - `loads`: convert a JSON object (string) into an `object`, a `dict` or a `list`
+
+## object streaming
+Watcher: reload object array on json file change. 
+Enables the continous loading of a json file.\n
+Implemented in: `object_stream`
+
+## require
+Runtime import and/or install of modules
+Implemented in: `require`
+"""
+
 from collections import namedtuple
-from dataclasses import dataclass
 import json
 import copy
 import threading
 import time
+import pip
 
 
-"""
-PYON VERSION 0.2.0
-"""
+def require(package: str) -> object:
+    """Implementation of Node.js's `require`. \n
+    This function imports the modules at runtime, but if it cannot find them, it uses pip to install them
 
+    Args:
+        package (str): the name of the package
+
+    Returns:
+        object: the module
+    """
+    try:
+        return __import__(package)
+    except ImportError:
+        pip.main(['install', package])
+        return __import__(package)
+    finally:
+        print(f"Pakcage \"{package}\" couldn't be installed, as a resoult require couldn't import it :(")
 
 class object_stream:
     """
@@ -75,10 +110,14 @@ class object_stream:
         self.__on_change_callbacks.append(callback)
     
     def start(self):
+        """Starts running the object_stream thread
+        """
         self.__run = True
         self.__watch_thread.start()
     
     def stop(self):
+        """Stops the object_stream thread
+        """
         self.__run = False
 
 
@@ -163,48 +202,71 @@ def __dict_to_object(olddict):
     
 
 def load_json(_json: str) -> dict: 
-    """
-    Loades the data from the _json file
+    """Loades the data from the _json file
+
+    Args:
+        _json (str): load file path
+
+    Returns:
+        dict: the json object loaded from the file
     """
     with open(_json, 'r', encoding="utf-8") as read_file:
         loaddata = json.load(read_file)
         return loaddata
 
 def dump_json(_json: str, data: str):
-    """
-    Saves the _json file with new data
+    """Saves the JSON data to _json
+
+    Args:
+        _json (str): dist json file path
+        data (str): the json object waiting to be saved
     """
     with open(_json, "w", encoding="utf-8") as write_file:
         json.dump(data, write_file, indent=4, ensure_ascii=False)
         write_file.write("\n")
 
-def dump(data, file: str, indent: int = 4):
-    """
-    Works the same as the json.dumps function, but exepts objects as data
+def dump(data: dict or list or object, file: str, indent: int = 4):
+    """Works the same as the json.dumps function, but exepts objects as data
+
+    Args:
+        data (dict or list or object): object or list or object, will be converted to a dict, and into a JSON
+        file (str): filepath
+        indent (int, optional): the indentation used in the JSON file. Defaults to 4.
     """
     new_data: dict = __object_to_dict(data) 
     with open(file, "w", encoding="utf-8") as write_file:
         json.dump(new_data, write_file, indent=indent, ensure_ascii=False)
         write_file.write("\n")
-    pass
 
-def load(file: str):
-    """
-    Loads the json file, and converts all the dictionaries which were objects
+def load(file: str) -> object or dict or list:
+    """Loads the json file, and converts all the dictionaries which were objects
+
+    Args:
+        file (str): filepath 
+
+    Returns:
+        object or dict or list: the decoded json
     """
     with open(file, 'r', encoding="utf-8") as read_file:
         loaddata = json.load(read_file)
         return __dict_to_object(loaddata)
 
-def dumps(data):
-    """
-    Convert an object into a JSON saveable dict.
+def dumps(data: object or dict or list) -> str:
+    """Convert an object into a JSON saveable dict.
     #### THIS ALSO CONVERTS EVERY SUB-OBJECT
-    """
-    return __object_to_dict(data)
 
-def loads(data):
+    Returns:
+        str: the encoded object as a string
     """
-    Convert the saved JSON string back into objects.
+    return json.dumps(__object_to_dict(data))
+
+def loads(data: str) -> object or dict or list:
+    """Convert the saved JSON string back into objects.
+
+    Args:
+        data (str): JSON data
+
+    Returns:
+        object or dict or list: decoded JSON object
     """
     return __dict_to_object(json.loads(data))
