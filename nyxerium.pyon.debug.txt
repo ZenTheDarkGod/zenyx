@@ -1,0 +1,317 @@
+
+19:28:47:423 | 
+19:28:47:423 | 
+19:28:47:423 | [Deep Serialize] Object: test(testParam={'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]})
+19:28:47:423 | 
+19:28:47:423 |  
+19:28:47:423 | 
+19:28:47:423 | [Start - 1] ==================== 
+19:28:47:423 |   [1] Original obj input:
+19:28:47:423 |  	test(testParam={'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}) 
+19:28:47:423 |   [TypeCheck] Value: test(testParam={'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}), Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:431 |   [1] Value for Iterability test:
+19:28:47:431 |  	value: test(testParam={'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}) @type: <class '__main__.test'> | is the value an object (__is_object): True | is the value a dict/list/tuple (test1): False
+19:28:47:431 | 	Final Resoult: True 
+19:28:47:431 |   [1] Original Obj Iterability (Good if False):
+19:28:47:431 |  	Object (obj): test(testParam={'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}) | is object iterable: True 
+19:28:47:432 |   [TypeCheck] Value: test(testParam={'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}), Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:432 |   [1] Value for Iterability test:
+19:28:47:432 |  	value: test(testParam={'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}) @type: <class '__main__.test'> | is the value an object (__is_object): True | is the value a dict/list/tuple (test1): False
+19:28:47:432 | 	Final Resoult: True 
+19:28:47:433 |   [TypeCheck] Value: test(testParam={'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}), Type(s): <class 'dict'> 
+19:28:47:434 |   [TypeCheck] Value: test(testParam={'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}), Type(s): <class 'dict'> 
+19:28:47:434 |   [TypeCheck] Value: test(testParam={'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}), Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:435 |   [TypeCheck] Value: {'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}, Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:436 |   [TypeCheck] Value: {'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}, Type(s): <class 'dict'> 
+19:28:47:437 |   [TypeCheck] Value: [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')], Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:439 |   [1] Value for Iterability test:
+19:28:47:439 |  	value: [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')] @type: <class 'list'> | is the value an object (__is_object): False | is the value a dict/list/tuple (test1): True
+19:28:47:439 | 	Final Resoult: True 
+19:28:47:441 | 
+19:28:47:441 | 
+19:28:47:441 | [Deep Serialize] Object: [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]
+19:28:47:441 | 
+19:28:47:441 |  
+19:28:47:442 | 
+19:28:47:442 | [Start - 2] ==================== 
+19:28:47:442 |   [2] Original obj input:
+19:28:47:442 |  	[{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')] 
+19:28:47:442 |   [TypeCheck] Value: [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')], Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:442 |   [2] Value for Iterability test:
+19:28:47:442 |  	value: [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')] @type: <class 'list'> | is the value an object (__is_object): False | is the value a dict/list/tuple (test1): True
+19:28:47:442 | 	Final Resoult: True 
+19:28:47:442 |   [2] Original Obj Iterability (Good if False):
+19:28:47:442 |  	Object (obj): [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')] | is object iterable: True 
+19:28:47:442 |   [TypeCheck] Value: [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')], Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:442 |   [2] Value for Iterability test:
+19:28:47:442 |  	value: [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')] @type: <class 'list'> | is the value an object (__is_object): False | is the value a dict/list/tuple (test1): True
+19:28:47:442 | 	Final Resoult: True 
+19:28:47:442 |   [TypeCheck] Value: [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')], Type(s): <class 'dict'> 
+19:28:47:442 |   [TypeCheck] Value: [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')], Type(s): <class 'dict'> 
+19:28:47:450 |   [TypeCheck] Value: [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')], Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:451 |   [2] Iterating list/tuple:
+19:28:47:451 |  	 List/Tuple (obj): [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')] | Element: {'listElement0': test(testParam='listElement1DictObject')} 
+19:28:47:451 |   [TypeCheck] Value: {'listElement0': test(testParam='listElement1DictObject')}, Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:453 |   [2] Value for Iterability test:
+19:28:47:453 |  	value: {'listElement0': test(testParam='listElement1DictObject')} @type: <class 'dict'> | is the value an object (__is_object): False | is the value a dict/list/tuple (test1): True
+19:28:47:453 | 	Final Resoult: True 
+19:28:47:454 | 
+19:28:47:454 | 
+19:28:47:454 | [Deep Serialize] Object: {'listElement0': test(testParam='listElement1DictObject')}
+19:28:47:454 | 
+19:28:47:454 |  
+19:28:47:454 | 
+19:28:47:454 | [Start - 3] ==================== 
+19:28:47:454 |   [3] Original obj input:
+19:28:47:454 |  	{'listElement0': test(testParam='listElement1DictObject')} 
+19:28:47:454 |   [TypeCheck] Value: {'listElement0': test(testParam='listElement1DictObject')}, Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:454 |   [3] Value for Iterability test:
+19:28:47:454 |  	value: {'listElement0': test(testParam='listElement1DictObject')} @type: <class 'dict'> | is the value an object (__is_object): False | is the value a dict/list/tuple (test1): True
+19:28:47:454 | 	Final Resoult: True 
+19:28:47:460 |   [3] Original Obj Iterability (Good if False):
+19:28:47:460 |  	Object (obj): {'listElement0': test(testParam='listElement1DictObject')} | is object iterable: True 
+19:28:47:461 |   [TypeCheck] Value: {'listElement0': test(testParam='listElement1DictObject')}, Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:463 |   [3] Value for Iterability test:
+19:28:47:463 |  	value: {'listElement0': test(testParam='listElement1DictObject')} @type: <class 'dict'> | is the value an object (__is_object): False | is the value a dict/list/tuple (test1): True
+19:28:47:463 | 	Final Resoult: True 
+19:28:47:463 |   [TypeCheck] Value: {'listElement0': test(testParam='listElement1DictObject')}, Type(s): <class 'dict'> 
+19:28:47:463 |   [TypeCheck] Value: {'listElement0': test(testParam='listElement1DictObject')}, Type(s): <class 'dict'> 
+19:28:47:463 |   [TypeCheck] Value: {'listElement0': test(testParam='listElement1DictObject')}, Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:463 |   [TypeCheck] Value: test(testParam='listElement1DictObject'), Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:463 |   [TypeCheck] Value: test(testParam='listElement1DictObject'), Type(s): <class 'dict'> 
+19:28:47:463 | 
+19:28:47:463 | 
+19:28:47:463 | [Deep Serialize] Object: test(testParam='listElement1DictObject')
+19:28:47:463 | 
+19:28:47:463 |  
+19:28:47:470 | 
+19:28:47:470 | [Start - 4] ==================== 
+19:28:47:472 |   [4] Original obj input:
+19:28:47:472 |  	test(testParam='listElement1DictObject') 
+19:28:47:473 |   [TypeCheck] Value: test(testParam='listElement1DictObject'), Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:475 |   [4] Value for Iterability test:
+19:28:47:475 |  	value: test(testParam='listElement1DictObject') @type: <class '__main__.test'> | is the value an object (__is_object): True | is the value a dict/list/tuple (test1): False
+19:28:47:475 | 	Final Resoult: True 
+19:28:47:477 |   [4] Original Obj Iterability (Good if False):
+19:28:47:477 |  	Object (obj): test(testParam='listElement1DictObject') | is object iterable: True 
+19:28:47:477 |   [TypeCheck] Value: test(testParam='listElement1DictObject'), Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:479 |   [4] Value for Iterability test:
+19:28:47:479 |  	value: test(testParam='listElement1DictObject') @type: <class '__main__.test'> | is the value an object (__is_object): True | is the value a dict/list/tuple (test1): False
+19:28:47:479 | 	Final Resoult: True 
+19:28:47:479 |   [TypeCheck] Value: test(testParam='listElement1DictObject'), Type(s): <class 'dict'> 
+19:28:47:480 |   [TypeCheck] Value: test(testParam='listElement1DictObject'), Type(s): <class 'dict'> 
+19:28:47:482 |   [TypeCheck] Value: test(testParam='listElement1DictObject'), Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:483 |   [TypeCheck] Value: listElement1DictObject, Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:483 |   [TypeCheck] Value: listElement1DictObject, Type(s): <class 'dict'> 
+19:28:47:483 |   [TypeCheck] Value: test, Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:483 |   [TypeCheck] Value: test, Type(s): <class 'dict'> 
+19:28:47:483 |   [4] New dict created:
+19:28:47:483 |  	{'testParam': 'listElement1DictObject', 'PYON_TYPE': 'test'} 
+19:28:47:489 | [End - 4] ==================== 
+19:28:47:489 |  
+19:28:47:491 |   [3] New dict created:
+19:28:47:491 |  	{'listElement0': {'testParam': 'listElement1DictObject', 'PYON_TYPE': 'test'}} 
+19:28:47:491 | [End - 3] ==================== 
+19:28:47:491 |  
+19:28:47:491 |   [2] Iterating list/tuple:
+19:28:47:491 |  	 List/Tuple (obj): [{'listElement0': {'testParam': 'listElement1DictObject', 'PYON_TYPE': 'test'}}, test(testParam='listElement2Param')] | Element: test(testParam='listElement2Param') 
+19:28:47:491 |   [TypeCheck] Value: test(testParam='listElement2Param'), Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:491 |   [2] Value for Iterability test:
+19:28:47:491 |  	value: test(testParam='listElement2Param') @type: <class '__main__.test'> | is the value an object (__is_object): True | is the value a dict/list/tuple (test1): False
+19:28:47:491 | 	Final Resoult: True 
+19:28:47:491 | 
+19:28:47:491 | 
+19:28:47:491 | [Deep Serialize] Object: test(testParam='listElement2Param')
+19:28:47:491 | 
+19:28:47:491 |  
+19:28:47:491 | 
+19:28:47:491 | [Start - 5] ==================== 
+19:28:47:491 |   [5] Original obj input:
+19:28:47:491 |  	test(testParam='listElement2Param') 
+19:28:47:491 |   [TypeCheck] Value: test(testParam='listElement2Param'), Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:491 |   [5] Value for Iterability test:
+19:28:47:491 |  	value: test(testParam='listElement2Param') @type: <class '__main__.test'> | is the value an object (__is_object): True | is the value a dict/list/tuple (test1): False
+19:28:47:491 | 	Final Resoult: True 
+19:28:47:501 |   [5] Original Obj Iterability (Good if False):
+19:28:47:501 |  	Object (obj): test(testParam='listElement2Param') | is object iterable: True 
+19:28:47:501 |   [TypeCheck] Value: test(testParam='listElement2Param'), Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:503 |   [5] Value for Iterability test:
+19:28:47:503 |  	value: test(testParam='listElement2Param') @type: <class '__main__.test'> | is the value an object (__is_object): True | is the value a dict/list/tuple (test1): False
+19:28:47:503 | 	Final Resoult: True 
+19:28:47:505 |   [TypeCheck] Value: test(testParam='listElement2Param'), Type(s): <class 'dict'> 
+19:28:47:505 |   [TypeCheck] Value: test(testParam='listElement2Param'), Type(s): <class 'dict'> 
+19:28:47:505 |   [TypeCheck] Value: test(testParam='listElement2Param'), Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:505 |   [TypeCheck] Value: listElement2Param, Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:505 |   [TypeCheck] Value: listElement2Param, Type(s): <class 'dict'> 
+19:28:47:511 |   [TypeCheck] Value: test, Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:512 |   [TypeCheck] Value: test, Type(s): <class 'dict'> 
+19:28:47:512 |   [5] New dict created:
+19:28:47:512 |  	{'testParam': 'listElement2Param', 'PYON_TYPE': 'test'} 
+19:28:47:512 | [End - 5] ==================== 
+19:28:47:512 |  
+19:28:47:516 | [Early End - 2] List Serialized ==================== 
+19:28:47:516 |  
+19:28:47:516 |   [TypeCheck] Value: test, Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:516 |   [TypeCheck] Value: test, Type(s): <class 'dict'> 
+19:28:47:516 |   [1] New dict created:
+19:28:47:516 |  	{'testParam': {'dictKey': [{'listElement0': {'testParam': 'listElement1DictObject', 'PYON_TYPE': 'test'}}, {'testParam': 'listElement2Param', 'PYON_TYPE': 'test'}]}, 'PYON_TYPE': 'test'} 
+19:28:47:516 | [End - 1] ==================== 
+19:28:47:516 |  
+19:28:47:522 | 
+19:28:47:522 | 
+19:28:47:522 | [Deep Serialize] Object: test(testParam={'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]})
+19:28:47:522 | 
+19:28:47:522 |  
+19:28:47:523 | 
+19:28:47:523 | [Start - 6] ==================== 
+19:28:47:523 |   [6] Original obj input:
+19:28:47:523 |  	test(testParam={'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}) 
+19:28:47:523 |   [TypeCheck] Value: test(testParam={'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}), Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:523 |   [6] Value for Iterability test:
+19:28:47:523 |  	value: test(testParam={'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}) @type: <class '__main__.test'> | is the value an object (__is_object): True | is the value a dict/list/tuple (test1): False
+19:28:47:523 | 	Final Resoult: True 
+19:28:47:531 |   [6] Original Obj Iterability (Good if False):
+19:28:47:531 |  	Object (obj): test(testParam={'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}) | is object iterable: True 
+19:28:47:531 |   [TypeCheck] Value: test(testParam={'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}), Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:531 |   [6] Value for Iterability test:
+19:28:47:531 |  	value: test(testParam={'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}) @type: <class '__main__.test'> | is the value an object (__is_object): True | is the value a dict/list/tuple (test1): False
+19:28:47:531 | 	Final Resoult: True 
+19:28:47:531 |   [TypeCheck] Value: test(testParam={'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}), Type(s): <class 'dict'> 
+19:28:47:538 |   [TypeCheck] Value: test(testParam={'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}), Type(s): <class 'dict'> 
+19:28:47:541 |   [TypeCheck] Value: test(testParam={'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}), Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:541 |   [TypeCheck] Value: {'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}, Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:541 |   [TypeCheck] Value: {'dictKey': [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]}, Type(s): <class 'dict'> 
+19:28:47:541 |   [TypeCheck] Value: [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')], Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:541 |   [6] Value for Iterability test:
+19:28:47:541 |  	value: [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')] @type: <class 'list'> | is the value an object (__is_object): False | is the value a dict/list/tuple (test1): True
+19:28:47:541 | 	Final Resoult: True 
+19:28:47:541 | 
+19:28:47:541 | 
+19:28:47:541 | [Deep Serialize] Object: [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')]
+19:28:47:541 | 
+19:28:47:541 |  
+19:28:47:541 | 
+19:28:47:541 | [Start - 7] ==================== 
+19:28:47:541 |   [7] Original obj input:
+19:28:47:541 |  	[{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')] 
+19:28:47:541 |   [TypeCheck] Value: [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')], Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:541 |   [7] Value for Iterability test:
+19:28:47:541 |  	value: [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')] @type: <class 'list'> | is the value an object (__is_object): False | is the value a dict/list/tuple (test1): True
+19:28:47:541 | 	Final Resoult: True 
+19:28:47:551 |   [7] Original Obj Iterability (Good if False):
+19:28:47:551 |  	Object (obj): [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')] | is object iterable: True 
+19:28:47:551 |   [TypeCheck] Value: [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')], Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:553 |   [7] Value for Iterability test:
+19:28:47:553 |  	value: [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')] @type: <class 'list'> | is the value an object (__is_object): False | is the value a dict/list/tuple (test1): True
+19:28:47:553 | 	Final Resoult: True 
+19:28:47:555 |   [TypeCheck] Value: [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')], Type(s): <class 'dict'> 
+19:28:47:555 |   [TypeCheck] Value: [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')], Type(s): <class 'dict'> 
+19:28:47:555 |   [TypeCheck] Value: [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')], Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:560 |   [7] Iterating list/tuple:
+19:28:47:560 |  	 List/Tuple (obj): [{'listElement0': test(testParam='listElement1DictObject')}, test(testParam='listElement2Param')] | Element: {'listElement0': test(testParam='listElement1DictObject')} 
+19:28:47:561 |   [TypeCheck] Value: {'listElement0': test(testParam='listElement1DictObject')}, Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:561 |   [7] Value for Iterability test:
+19:28:47:561 |  	value: {'listElement0': test(testParam='listElement1DictObject')} @type: <class 'dict'> | is the value an object (__is_object): False | is the value a dict/list/tuple (test1): True
+19:28:47:561 | 	Final Resoult: True 
+19:28:47:561 | 
+19:28:47:561 | 
+19:28:47:561 | [Deep Serialize] Object: {'listElement0': test(testParam='listElement1DictObject')}
+19:28:47:561 | 
+19:28:47:561 |  
+19:28:47:561 | 
+19:28:47:561 | [Start - 8] ==================== 
+19:28:47:561 |   [8] Original obj input:
+19:28:47:561 |  	{'listElement0': test(testParam='listElement1DictObject')} 
+19:28:47:561 |   [TypeCheck] Value: {'listElement0': test(testParam='listElement1DictObject')}, Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:561 |   [8] Value for Iterability test:
+19:28:47:561 |  	value: {'listElement0': test(testParam='listElement1DictObject')} @type: <class 'dict'> | is the value an object (__is_object): False | is the value a dict/list/tuple (test1): True
+19:28:47:561 | 	Final Resoult: True 
+19:28:47:561 |   [8] Original Obj Iterability (Good if False):
+19:28:47:561 |  	Object (obj): {'listElement0': test(testParam='listElement1DictObject')} | is object iterable: True 
+19:28:47:561 |   [TypeCheck] Value: {'listElement0': test(testParam='listElement1DictObject')}, Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:573 |   [8] Value for Iterability test:
+19:28:47:573 |  	value: {'listElement0': test(testParam='listElement1DictObject')} @type: <class 'dict'> | is the value an object (__is_object): False | is the value a dict/list/tuple (test1): True
+19:28:47:573 | 	Final Resoult: True 
+19:28:47:573 |   [TypeCheck] Value: {'listElement0': test(testParam='listElement1DictObject')}, Type(s): <class 'dict'> 
+19:28:47:573 |   [TypeCheck] Value: {'listElement0': test(testParam='listElement1DictObject')}, Type(s): <class 'dict'> 
+19:28:47:573 |   [TypeCheck] Value: {'listElement0': test(testParam='listElement1DictObject')}, Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:573 |   [TypeCheck] Value: test(testParam='listElement1DictObject'), Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:573 |   [TypeCheck] Value: test(testParam='listElement1DictObject'), Type(s): <class 'dict'> 
+19:28:47:581 | 
+19:28:47:581 | 
+19:28:47:581 | [Deep Serialize] Object: test(testParam='listElement1DictObject')
+19:28:47:581 | 
+19:28:47:581 |  
+19:28:47:581 | 
+19:28:47:581 | [Start - 9] ==================== 
+19:28:47:581 |   [9] Original obj input:
+19:28:47:581 |  	test(testParam='listElement1DictObject') 
+19:28:47:581 |   [TypeCheck] Value: test(testParam='listElement1DictObject'), Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:581 |   [9] Value for Iterability test:
+19:28:47:581 |  	value: test(testParam='listElement1DictObject') @type: <class '__main__.test'> | is the value an object (__is_object): True | is the value a dict/list/tuple (test1): False
+19:28:47:581 | 	Final Resoult: True 
+19:28:47:581 |   [9] Original Obj Iterability (Good if False):
+19:28:47:581 |  	Object (obj): test(testParam='listElement1DictObject') | is object iterable: True 
+19:28:47:588 |   [TypeCheck] Value: test(testParam='listElement1DictObject'), Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:590 |   [9] Value for Iterability test:
+19:28:47:590 |  	value: test(testParam='listElement1DictObject') @type: <class '__main__.test'> | is the value an object (__is_object): True | is the value a dict/list/tuple (test1): False
+19:28:47:590 | 	Final Resoult: True 
+19:28:47:591 |   [TypeCheck] Value: test(testParam='listElement1DictObject'), Type(s): <class 'dict'> 
+19:28:47:593 |   [TypeCheck] Value: test(testParam='listElement1DictObject'), Type(s): <class 'dict'> 
+19:28:47:593 |   [TypeCheck] Value: test(testParam='listElement1DictObject'), Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:593 |   [TypeCheck] Value: listElement1DictObject, Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:593 |   [TypeCheck] Value: listElement1DictObject, Type(s): <class 'dict'> 
+19:28:47:593 |   [TypeCheck] Value: test, Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:593 |   [TypeCheck] Value: test, Type(s): <class 'dict'> 
+19:28:47:593 |   [9] New dict created:
+19:28:47:593 |  	{'testParam': 'listElement1DictObject', 'PYON_TYPE': 'test'} 
+19:28:47:601 | [End - 9] ==================== 
+19:28:47:601 |  
+19:28:47:601 |   [8] New dict created:
+19:28:47:601 |  	{'listElement0': {'testParam': 'listElement1DictObject', 'PYON_TYPE': 'test'}} 
+19:28:47:604 | [End - 8] ==================== 
+19:28:47:604 |  
+19:28:47:606 |   [7] Iterating list/tuple:
+19:28:47:606 |  	 List/Tuple (obj): [{'listElement0': {'testParam': 'listElement1DictObject', 'PYON_TYPE': 'test'}}, test(testParam='listElement2Param')] | Element: test(testParam='listElement2Param') 
+19:28:47:606 |   [TypeCheck] Value: test(testParam='listElement2Param'), Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:606 |   [7] Value for Iterability test:
+19:28:47:606 |  	value: test(testParam='listElement2Param') @type: <class '__main__.test'> | is the value an object (__is_object): True | is the value a dict/list/tuple (test1): False
+19:28:47:606 | 	Final Resoult: True 
+19:28:47:610 | 
+19:28:47:610 | 
+19:28:47:610 | [Deep Serialize] Object: test(testParam='listElement2Param')
+19:28:47:610 | 
+19:28:47:610 |  
+19:28:47:611 | 
+19:28:47:611 | [Start - 10] ==================== 
+19:28:47:612 |   [10] Original obj input:
+19:28:47:612 |  	test(testParam='listElement2Param') 
+19:28:47:612 |   [TypeCheck] Value: test(testParam='listElement2Param'), Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:612 |   [10] Value for Iterability test:
+19:28:47:612 |  	value: test(testParam='listElement2Param') @type: <class '__main__.test'> | is the value an object (__is_object): True | is the value a dict/list/tuple (test1): False
+19:28:47:612 | 	Final Resoult: True 
+19:28:47:612 |   [10] Original Obj Iterability (Good if False):
+19:28:47:612 |  	Object (obj): test(testParam='listElement2Param') | is object iterable: True 
+19:28:47:612 |   [TypeCheck] Value: test(testParam='listElement2Param'), Type(s): (<class 'dict'>, <class 'list'>, <class 'tuple'>) 
+19:28:47:612 |   [10] Value for Iterability test:
+19:28:47:612 |  	value: test(testParam='listElement2Param') @type: <class '__main__.test'> | is the value an object (__is_object): True | is the value a dict/list/tuple (test1): False
+19:28:47:612 | 	Final Resoult: True 
+19:28:47:612 |   [TypeCheck] Value: test(testParam='listElement2Param'), Type(s): <class 'dict'> 
+19:28:47:622 |   [TypeCheck] Value: test(testParam='listElement2Param'), Type(s): <class 'dict'> 
+19:28:47:622 |   [TypeCheck] Value: test(testParam='listElement2Param'), Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:622 |   [TypeCheck] Value: listElement2Param, Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:622 |   [TypeCheck] Value: listElement2Param, Type(s): <class 'dict'> 
+19:28:47:622 |   [TypeCheck] Value: test, Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:622 |   [TypeCheck] Value: test, Type(s): <class 'dict'> 
+19:28:47:630 |   [10] New dict created:
+19:28:47:630 |  	{'testParam': 'listElement2Param', 'PYON_TYPE': 'test'} 
+19:28:47:631 | [End - 10] ==================== 
+19:28:47:631 |  
+19:28:47:633 | [Early End - 7] List Serialized ==================== 
+19:28:47:633 |  
+19:28:47:633 |   [TypeCheck] Value: test, Type(s): (<class 'list'>, <class 'tuple'>) 
+19:28:47:633 |   [TypeCheck] Value: test, Type(s): <class 'dict'> 
+19:28:47:638 |   [6] New dict created:
+19:28:47:638 |  	{'testParam': {'dictKey': [{'listElement0': {'testParam': 'listElement1DictObject', 'PYON_TYPE': 'test'}}, {'testParam': 'listElement2Param', 'PYON_TYPE': 'test'}]}, 'PYON_TYPE': 'test'} 
+19:28:47:640 | [End - 6] ==================== 
+19:28:47:640 |  
