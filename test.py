@@ -1,5 +1,5 @@
 
-import nyxerium
+import zenyx
 from dataclasses import dataclass
 import timeit
 
@@ -10,18 +10,16 @@ class test:
 
 def main():
     
-    nyxerium.pyon.debug()
+    zenyx.pyon.debug()
     
-    x = test({"dictKey": [{"listElement0": test("listElement1DictObject")}, test("listElement2Param")]})
+    y = test(["testDataaa", test("nem")])
     
-    def testf():
-        nyxerium.pyon.deep_serialize(x)
-        return
+    zenyx.pyon.dump(y, "test.json")
     
-    time_elapsed = timeit.timeit(testf, number=1)
-    print(time_elapsed)
+    x = zenyx.pyon.load("test.json")
     
-    nyxerium.pyon.dump(x, "test.json")
+    print(x)
+    
     
     
 if __name__ == "__main__":

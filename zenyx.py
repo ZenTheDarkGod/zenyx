@@ -142,6 +142,7 @@ class pyon:
         The debug file will be saved as `nyxerium.pyon.debug.txt`.\n
         For now it only contains the following:
         - deep_serialize
+        - deep_parse
         """
         pyon.__debug_setting = True
         with open("nyxerium.pyon.debug.txt", "w") as write:
@@ -176,10 +177,13 @@ class pyon:
     
     @staticmethod
     def deep_serialize(obj: any) -> dict:
-        pyon.__debug(f"\n\n[Deep Serialize] Object: {obj}\n\n")
+        pyon.__debug(f"\n[Deep Serialize] Object: {obj}")
         
-        xdent = copy.deepcopy(pyon.__indent)
-        pyon.__indent += 1
+        xdent = 1
+        if pyon.__debug_setting:
+            xdent = copy.deepcopy(pyon.__indent)
+            pyon.__indent += 1
+            
         pyon.__debug(f"\n[Start - {xdent}]","="*20)
         
         """Converts the object to a dictionary, makes it saveable to a JSON.
@@ -289,7 +293,7 @@ class pyon:
 
 
     @staticmethod
-    def deep_parse(olddict: dict) -> object or dict:
+    def deep_parse(olddict: dict or list) -> object or dict:
         """
         #### WARNING: IT WILL NOT CONVERT ANY DICTIONARIES WHICH HAVE NOT BEEN SAVED WITH: "__object_to_dict"\n
         Converts the saved dictionary back to the original object
@@ -297,7 +301,18 @@ class pyon:
         """
         class_type: str = ""
         params: dict = {}
+        
+        
+        xdent = 1
+        if pyon.__debug_setting:
+            xdent = copy.deepcopy(pyon.__indent)
+            pyon.__indent += 1
+            
+        pyon.__debug(f"\n[Deep Parse] Dict/List: {olddict}")
+        pyon.__debug(f"\n[Start - {xdent}]","="*20)
 
+        if pyon.is_type(olddict, list):
+            olddict = {"&ORIGINAL_LIST" : olddict}
 
         if olddict.get('PYON_TYPE'):
             class_type = olddict["PYON_TYPE"]
@@ -305,6 +320,7 @@ class pyon:
         else:
             class_type = "&DICT"
 
+        # not using pyon.is_type() bc of performance
 
         for key, value in olddict.items():
             if type(value) is dict:
@@ -317,19 +333,27 @@ class pyon:
 
             if class_type != "&DICT":
                 params[key] = value
-            else:
-                olddict[key] = value
+                continue
+            olddict[key] = value
             
+        if olddict.get("&ORIGINAL_LIST"):
+            olddict = olddict.get("&ORIGINAL_LIST")
+            pyon.__debug(f"  [{xdent}] Restored Original List:\n  \t{olddict}")
+            
+        def __end(text: any):
+            pyon.__debug(f"  [{xdent}] Return Value: {text}")
+            pyon.__debug(f"[End - {xdent}]","="*20,"\n")
         
         if class_type != "&DICT":
             params["pyon_converted"] = True
             new_object_initializer = namedtuple(class_type, list(params.keys()))
             new_object = new_object_initializer(*list(params.values()))
             
+            __end(new_object)
             return new_object
 
-        else:
-            return olddict
+        __end(olddict)
+        return olddict
         
 
     @staticmethod

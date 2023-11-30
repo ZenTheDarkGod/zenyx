@@ -1,17 +1,10 @@
 {
-    "testParam": {
-        "dictKey": [
-            {
-                "listElement0": {
-                    "testParam": "listElement1DictObject",
-                    "PYON_TYPE": "test"
-                }
-            },
-            {
-                "testParam": "listElement2Param",
-                "PYON_TYPE": "test"
-            }
-        ]
-    },
+    "testParam": [
+        "testDataaa",
+        {
+            "testParam": "nem",
+            "PYON_TYPE": "test"
+        }
+    ],
     "PYON_TYPE": "test"
 }
