@@ -47,13 +47,18 @@ def __update_version(update_type: 0 or 1 or 2):
 
 def main():
     try:
-        update_type: int = int(input("0 - Patch | 1 - Minor | 2 - Major\nPatch type: "))
-        __update_version(update_type)
+        update_type: int = int(input("0 - Patch | 1 - Minor | 2 - Major | 3 - amend\nPatch type: "))
+        if update_type < 2 and update_type > 0:
+            __update_version(update_type)
         commit_title: str = input("Commit title: ")
         commit_description: str = input("Commit description: ")
         
+        amend_text = ""
+        if update_type == 3:
+            amend_text = " --amend"
+        
         os.system("git add .")
-        os.system(f"git commit -m \"{__get_current_version()} | {commit_title}\" -m \"{commit_description}\"")
+        os.system(f"git commit{amend_text} -m \"{__get_current_version()} | {commit_title}\" -m \"{commit_description}\"")
         
         try:
             os.system("git push")
