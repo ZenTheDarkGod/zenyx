@@ -4,9 +4,11 @@ import json
 import copy
 from collections import namedtuple
 import re
+import os
 
 __debug_setting: bool = False
 __debug_file: str = "pyon.debug.md"
+__debug_path: str = ""
 
 
 def __get_console_time():
@@ -16,20 +18,25 @@ def __get_console_time():
     formatted_time = current_time.strftime("%H:%M:%S:%f")[:-3]
     return formatted_time
 
-def debug():
-    """
-    ## THIS WILL SLOW DOWN PYON BY ~300%
+def debug(path: str):
+    """## THIS WILL SLOW DOWN PYON BY ~300%
     Enables the debug feature.
     The debug file will be saved as `pyon.debug.txt`.\n
     For now it only contains the following:
     - deep_serialize
     - deep_parse
+
+    Args:
+        path (str): just use `__file__`
     """
     global __debug_setting
     global __debug_file
+    global __debug_path
+    
+    __debug_path = os.path.join(os.path.dirname(os.path.abspath(path)), __debug_file)
     
     __debug_setting = True
-    with open(__debug_file, "w") as write:
+    with open(__debug_path, "w") as write:
         write.write("")
 
 
@@ -50,7 +57,7 @@ def __debug(*args: str):
 
             return result_string
         
-        with open(__debug_file, "a") as wf:
+        with open(__debug_path, "a") as wf:
             wf.write(time_text)
             __arglist = list(args)
             __arglist.append("\n")
@@ -279,7 +286,7 @@ def deep_parse(olddict: dict or list, *args: str, callbacktime: int = 0) -> obje
         
     if olddict.get("&ORIGINAL_LIST"):
         olddict = olddict.get("&ORIGINAL_LIST")
-        __debug(f"  **`[{xdent}]`** Restored Original List:\n  \t{olddict}")
+        __debug(f"  **`[{xdent}]`** Restored Original List:\n  \t`{olddict}`")
         
     def __end(text: any):
         __debug(f"  **`[{xdent}]`** Return Value: \n\t`{text}`")

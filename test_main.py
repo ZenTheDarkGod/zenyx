@@ -7,7 +7,7 @@ class test:
 
 
 def main():
-    zenyx.pyon.debug()
+    zenyx.pyon.debug(__file__)
     
     x = test([[[test("asd")]]])
     y = zenyx.pyon.deep_serialize(x)
