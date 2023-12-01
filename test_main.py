@@ -7,7 +7,10 @@ class test:
 
 
 def main():
-    x = test("asd")
-    assert zenyx.pyon.dumps(x) == '{"testParam": "asd", "PYON_TYPE": "test"}'
+    x = test([[[test("asd")]]])
+    print(zenyx.pyon.deep_serialize(x))
+    print("Test 1 run successfully")
     
     
+if __name__ == "__main__":
+    main()

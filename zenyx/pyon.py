@@ -121,16 +121,23 @@ def deep_serialize(obj: any) -> dict:
     # If the obj is already a dict, just use it as the base
     if (is_type(obj, dict)):
         new_dict: dict = copy.deepcopy(obj)
+        
     # DO NOT FUCK WITH THIS FOR CHIRST'S SAKE MAN IT WILL BREAK
     # SWEAR TO GOD I DON'T KNOW HOW THIS WORKS AND I DON'T EVEN WANT TO
     # PLEASE DO NOT TOUCH IT
     #                                   - zewenn 30/11/2023
+    # =====================================================================
+    # So this checks if the obj is not a dict, and it also checks if the obj is an object (`hasattr(obj, "__dict__")`) or a namedtuple (`hasattr(obj, "_asdict"))`)
+    #                                   - zewenn 01/12/2023
     if (not is_type(obj, dict)) and (hasattr(obj, "__dict__") or hasattr(obj, "_asdict")):
-        if not hasattr(obj, "pyon_converted"):
+        # if it's not a pyon converted named tuple -> it's an object
+        if not hasattr(obj, "pyon_converted") or not hasattr(obj, "_asdict"):
             new_dict: dict = copy.deepcopy(obj).__dict__
         else:
+            # it's a namedtuple
             new_dict = copy.deepcopy(obj)._asdict()
         new_dict['PYON_TYPE'] = str(obj.__class__.__name__)
+        
     # Handling list[list[list[object]]] edge cases
     if (is_type(obj, (list, tuple))):
         for index, element in enumerate(obj):
@@ -144,7 +151,7 @@ def deep_serialize(obj: any) -> dict:
         # Object(ls=[Object2()])
         if is_type(value, (list, tuple)): 
             for i, item in enumerate(value):
-                if __is_object(item) or is_type(item, dict):
+                if __is_iterable(item):
                     value[i] = deep_serialize(item)
         
         # Object(asd={asd: Object2()})
