@@ -7,8 +7,11 @@ class test:
 
 
 def main():
+    zenyx.pyon.debug()
+    
     x = test([[[test("asd")]]])
-    print(zenyx.pyon.deep_serialize(x))
+    y = zenyx.pyon.deep_serialize(x)
+    print(zenyx.pyon.deep_parse(y))
     print("Test 1 run successfully")
     
     
