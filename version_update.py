@@ -35,6 +35,14 @@ def __update_version(update_type: 0 or 1 or 2):
     __new_version[abs(-2 + update_type)] += 1
     new_version = []
     
+    match update_type:
+        case 1:
+            __new_version[2] = 0
+        case 2:
+            __new_version[2] = 0
+            __new_version[1] = 0
+            
+    
     for x in __new_version:
         new_version.append(str(x))
     
