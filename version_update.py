@@ -49,6 +49,8 @@ def __update_version(update_type: 0 or 1 or 2):
         new_version.append(str(x))
     
     
+    print(__new_version, new_version, current)
+    
     with open(os.path.join(root_folder, "src", "zenyx", "__init__.py"), "r+") as file:
         version_replaced: str = __replace_first_version(file.read(), ".".join(new_version))
         file.seek(0)
@@ -58,13 +60,17 @@ def __update_version(update_type: 0 or 1 or 2):
         version_replaced: str = __replace_first_version(file.read(), ".".join(new_version))
         file.seek(0)
         file.write(version_replaced)
+        
+    return ".".join(new_version)
     
 
 def main():
     try:
+        new_v = ""
+        
         update_type: int = int(input("0 - Patch | 1 - Minor | 2 - Major | 3 - amend\nPatch type: "))
         if update_type < 2 and update_type > 0:
-            __update_version(update_type)
+            new_v = __update_version(update_type)
         commit_title: str = input("Commit title: ")
         commit_description: str = input("Commit description: ")
         
@@ -73,7 +79,7 @@ def main():
             amend_text = " --amend"
         
         os.system("git add .")
-        os.system(f"git commit{amend_text} -m \"{__get_current_version()} | {commit_title}\" -m \"{commit_description}\"")
+        os.system(f"git commit{amend_text} -m \"{new_v} | {commit_title}\" -m \"{commit_description}\"")
         
         try:
             os.system("git push")
@@ -84,3 +90,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # __update_version(0)
