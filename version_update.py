@@ -66,11 +66,17 @@ def main():
     try:
         new_v: str = ""
         
-        update_type: int = int(input("0 - Patch | 1 - Minor | 2 - Major | 3 - amend\nPatch type: "))
-        if update_type < 2 and update_type >= 0:
+        update_type: int = int(input("0 - Patch | 1 - Minor | 2 - Major | 3 - Amend | 4 - Chore\nPatch type: "))
+        
+        option_dict = {
+            3: "Amend",
+            4: "Chore"
+        }
+        
+        if update_type <= 2 and update_type >= 0:
             new_v = __update_version(update_type)
-        elif update_type == 3:
-            new_v = "amend"
+        elif update_type <= 4 and update_type >= 3:
+            new_v = option_dict[update_type]
         else:
             raise ValueError
             
