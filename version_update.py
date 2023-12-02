@@ -47,9 +47,7 @@ def __update_version(update_type: 0 or 1 or 2):
     
     for x in __new_version:
         new_version.append(str(x))
-    
-    
-    print(__new_version, new_version, current)
+
     
     with open(os.path.join(root_folder, "src", "zenyx", "__init__.py"), "r+") as file:
         version_replaced: str = __replace_first_version(file.read(), ".".join(new_version))
@@ -66,11 +64,16 @@ def __update_version(update_type: 0 or 1 or 2):
 
 def main():
     try:
-        new_v = ""
+        new_v: str = ""
         
         update_type: int = int(input("0 - Patch | 1 - Minor | 2 - Major | 3 - amend\nPatch type: "))
-        if update_type < 2 and update_type > 0:
+        if update_type < 2 and update_type >= 0:
             new_v = __update_version(update_type)
+        elif update_type == 3:
+            new_v = "amend"
+        else:
+            raise ValueError
+            
         commit_title: str = input("Commit title: ")
         commit_description: str = input("Commit description: ")
         
@@ -90,4 +93,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    # __update_version(0)
