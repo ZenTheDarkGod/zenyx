@@ -120,8 +120,8 @@ def main():
             except:
                 print("Version already uploaded")
                 
-            __range = 10
-            print(f"Waiting for package upload... ({__range}s)", end="")
+            __range = 20
+            print("\n")
             for i in range(__range):
                 time.sleep(1)
                 print(f"Waiting for package upload... ({__range - i}s)", end="\r")
