@@ -1,6 +1,8 @@
 
 import os
 import re
+import time
+
 
 root_folder = "\\".join(__file__.split("\\")[0:-1])
 
@@ -88,8 +90,11 @@ def main():
             4: "Chore"
         }
         
+        version_number = __get_current_version()
+        
         if update_type <= 2 and update_type >= 0:
             new_v = __update_version(update_type)
+            version_number = new_v
         elif update_type <= 4 and update_type >= 3:
             new_v = option_dict[update_type]
         else:
@@ -110,7 +115,12 @@ def main():
             
             __delete_files_in_folder(os.path.join(os.path.dirname(os.path.abspath(__file__)), "dist"))
             os.system("python -m build")
-            os.system("python -m twine upload --verbose --repository  testpypi dist/*")
+            try:
+                os.system("python -m twine upload --verbose --repository  testpypi dist/*")
+            except:
+                print("Version already uploaded")
+            print("Waiting for package upload (5s)...")
+            time.sleep(5)
             os.system("python -m pip install --index-url https://test.pypi.org/simple/ --no-deps --upgrade zenyx")
             
         
