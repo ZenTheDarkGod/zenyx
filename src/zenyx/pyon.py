@@ -99,7 +99,7 @@ __debug_path: str = ""
 #     return (f"\n**`{ret_text[0:length]}`**\n")
 
 def is_type(value: any, _type):
-    debugf.log(f"  **`[TypeCheck]`** Checking Type \n\tValue: `{value}`, \n\tType(s): `{_type}`")
+    debug.log(f"  **`[TypeCheck]`** Checking Type \n\tValue: `{value}`, \n\tType(s): `{_type}`")
     if type(value) is _type:
         return True
     if type(_type) in [list, tuple]:
@@ -113,23 +113,23 @@ def is_type(value: any, _type):
 
 
 
-class debugf:
+class debug:
     class debug_object:
         def __init__(self, path, *args: str, debug_file: str = "") -> None:
-            self.path: str
+            self.path: str = path
             self.debug_file: str = "pyon.debug.md"
             if debug_file != "":
                 self.debug_file = debug_file
             
-            self.__debug_path = os.path.join(os.path.dirname(os.path.abspath(self.path)), self.debug_file)
+            self.debug_path = os.path.join(os.path.dirname(os.path.abspath(self.path)), self.debug_file)
             
             
     
-    debugger: debug_object or None
+    debugger: debug_object or None = None
     __indent = 1
     
     @staticmethod
-    def create(path, *args: str, filename: str = ""):
+    def init(path, *args: str, filename: str = ""):
         """## THIS WILL SLOW DOWN PYON BY ~300%
         Enables the debug feature.
         The debug file will be saved as `pyon.debug.txt`.\n
@@ -140,8 +140,8 @@ class debugf:
         Args:
             path (str): just use `__file__`
         """
-        if debugf.debugger != None:
-                debugf.debugger = debugf.debug_object(path=path, debug_file=filename)
+        if debug.debugger == None:
+                debug.debugger = debug.debug_object(path=path, debug_file=filename)
         else:
             raise Exception("Can't initalize multiple debuggers :(")
     
@@ -155,11 +155,11 @@ class debugf:
     
     @staticmethod
     def log(*args: str):
-        if debugf.debugger == None:
+        if debug.debugger == None:
             return
         
         print(*args)
-        time_text = f"\n<br>`{debugf.__get_console_time()}` | "
+        time_text = f"\n<br>`{debug.__get_console_time()}` | "
         
         def replace_newlines(input_string, _with):
             # Define a pattern to match newline characters outside triple backticks
@@ -170,7 +170,7 @@ class debugf:
 
             return result_string
         
-        with open(debugf.debugger.__debug_path, "a") as wf:
+        with open(debug.debugger.debug_path, "a") as wf:
             wf.write(time_text)
             __arglist = list(args)
             __arglist.append("\n")
@@ -210,15 +210,15 @@ class debugf:
         return (f"\n**`{ret_text[0:length]}`**\n")
 
 def deep_serialize(obj: any, *args, callbacktime:int = 0) -> dict:
-    debugf.log(debugf.separator_text(title="Deep Serialize", xdent=0, callbackorigin=callbacktime))
+    debug.log(debug.separator_text(title="Deep Serialize", xdent=0, callbackorigin=callbacktime))
     global __debug_setting
     xdent = 1
     if __debug_setting:
-        xdent = copy.deepcopy(debugf.__indent)
-        debugf.__indent += 1
+        xdent = copy.deepcopy(debug.__indent)
+        debug.__indent += 1
         
     # __debug(f"\n[Start - {xdent} - Caller: {callbacktime}]","="*20)
-    debugf.log(debugf.separator_text(title="Start", xdent=xdent, callbackorigin=callbacktime))
+    debug.log(debug.separator_text(title="Start", xdent=xdent, callbackorigin=callbacktime))
     
     """Converts the object to a dictionary, makes it saveable to a JSON.
     Aslo converts every attribute of the object which were objects\n
@@ -228,7 +228,7 @@ def deep_serialize(obj: any, *args, callbacktime:int = 0) -> dict:
         dict: _description_
     """
     
-    debugf.log(f"  **`[{xdent}]`** Original obj input:\n", f"\t`{obj}`")
+    debug.log(f"  **`[{xdent}]`** Original obj input:\n", f"\t`{obj}`")
     
     new_dict: dict = {}
 
@@ -263,7 +263,7 @@ def deep_serialize(obj: any, *args, callbacktime:int = 0) -> dict:
         if (is_type(value, (dict, list, tuple))):
             test1 = True
         
-        debugf.log(f"  **`[{xdent}]`** Iterability test:\n", 
+        debug.log(f"  **`[{xdent}]`** Iterability test:\n", 
                    f"\t**Params:**\n\t\tValue: `{value}`\n\t\t@Type: `{type(value)}`\n",
                    f"\tIs object *(`__is_object`)*: `{__is_object(value)}`\n",
                    f"\tIs dict/list/tuple *(`test1`)*: `{test1}`\n",
@@ -272,9 +272,9 @@ def deep_serialize(obj: any, *args, callbacktime:int = 0) -> dict:
         return __is_object(value) or test1
     
     # If the obj is not iterable, return
-    debugf.log(f"  **`[{xdent}]`** Original Obj Iterability *(can be `False`)*:\n", f"\tObject *(`obj`)*: `{obj}` \n\t**Is object iterable**: `{__is_iterable(obj)}`")
+    debug.log(f"  **`[{xdent}]`** Original Obj Iterability *(can be `False`)*:\n", f"\tObject *(`obj`)*: `{obj}` \n\t**Is object iterable**: `{__is_iterable(obj)}`")
     if not __is_iterable(obj):
-        debugf.log(debugf.separator_text(title="Early End", text="Not Iterable", xdent=xdent, callbackorigin=callbacktime))
+        debug.log(debug.separator_text(title="Early End", text="Not Iterable", xdent=xdent, callbackorigin=callbacktime))
         return obj
     # If the obj is already a dict, just use it as the base
     if (is_type(obj, dict)):
@@ -301,11 +301,11 @@ def deep_serialize(obj: any, *args, callbacktime:int = 0) -> dict:
     # Handling list[list[list[object]]] edge cases
     if (is_type(obj, (list, tuple))):
         for index, element in enumerate(obj):
-            debugf.log(f"  **`[{xdent}]`** Iterating List/Tuple:\n", f"\tList/Tuple *(`obj`)*: `{obj}`\n\tElement: `{element}`")
+            debug.log(f"  **`[{xdent}]`** Iterating List/Tuple:\n", f"\tList/Tuple *(`obj`)*: `{obj}`\n\tElement: `{element}`")
             if __is_iterable(element):
                 obj[index] = __self_call(element)
         
-        debugf.log(debugf.separator_text(title="Early End", text="List Serialized", xdent=xdent, callbackorigin=callbacktime))
+        debug.log(debug.separator_text(title="Early End", text="List Serialized", xdent=xdent, callbackorigin=callbacktime))
         return obj
     
     # At this point new_dict is a dictionary, containing all keys and all values of the object/dict
@@ -325,11 +325,11 @@ def deep_serialize(obj: any, *args, callbacktime:int = 0) -> dict:
         if __is_object(value):
             new_dict[key] = __self_call(value)
     
-    debugf.log(f"  **`[{xdent}]`** **New dict created:**\n", f"\t`{new_dict}`")
-    debugf.log(debugf.separator_text(title="End", xdent=xdent, callbackorigin=callbacktime))
+    debug.log(f"  **`[{xdent}]`** **New dict created:**\n", f"\t`{new_dict}`")
+    debug.log(debug.separator_text(title="End", xdent=xdent, callbackorigin=callbacktime))
     
     if (xdent == 1):
-        debugf.__indent = 1
+        debug.__indent = 1
     
     return new_dict
 
@@ -344,19 +344,19 @@ def deep_parse(olddict: dict or list, *args: str, callbacktime: int = 0) -> obje
     class_type: str = ""
     params: dict = {}
     
-    debugf.log(debugf.separator_text(title="Deep Parse", xdent=0, callbackorigin=callbacktime))
+    debug.log(debug.separator_text(title="Deep Parse", xdent=0, callbackorigin=callbacktime))
     
     xdent = 1
     if __debug_setting:
-        xdent = copy.deepcopy(debugf.__indent)
-        debugf.__indent += 1
+        xdent = copy.deepcopy(debug.__indent)
+        debug.__indent += 1
         
     
     def __self_call(obj: any):
         return deep_parse(obj, callbacktime=xdent)
         
     # __debug(f"\n[Deep Parse] Dict/List: {olddict}")
-    debugf.log(debugf.separator_text(title="Start", xdent=xdent, callbackorigin=callbacktime))
+    debug.log(debug.separator_text(title="Start", xdent=xdent, callbackorigin=callbacktime))
     
     if is_type(olddict, list):
         olddict = {"&ORIGINAL_LIST" : olddict}
@@ -384,11 +384,11 @@ def deep_parse(olddict: dict or list, *args: str, callbacktime: int = 0) -> obje
         
     if olddict.get("&ORIGINAL_LIST"):
         olddict = olddict.get("&ORIGINAL_LIST")
-        debugf.log(f"  **`[{xdent}]`** Restored Original List:\n  \t`{olddict}`")
+        debug.log(f"  **`[{xdent}]`** Restored Original List:\n  \t`{olddict}`")
         
     def __end(text: any):
-        debugf.log(f"  **`[{xdent}]`** Return Value: \n\t`{text}`")
-        debugf.log(debugf.separator_text(title="End", xdent=xdent, callbackorigin=callbacktime))
+        debug.log(f"  **`[{xdent}]`** Return Value: \n\t`{text}`")
+        debug.log(debug.separator_text(title="End", xdent=xdent, callbackorigin=callbacktime))
     
     if class_type != "&DICT":
         params["pyon_converted"] = True
@@ -401,7 +401,7 @@ def deep_parse(olddict: dict or list, *args: str, callbacktime: int = 0) -> obje
     
     
     if (xdent == 1):
-        debugf.__indent = 1
+        debug.__indent = 1
     
     return olddict
     

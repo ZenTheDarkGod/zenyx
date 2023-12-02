@@ -26,7 +26,6 @@ def __replace_first_version(input_text, custom_version):
         # No version numbers found
         return input_text
 
-print(__get_current_version())
 
 def __update_version(update_type: 0 or 1 or 2):
     current = __get_current_version().split(".")
@@ -60,7 +59,23 @@ def __update_version(update_type: 0 or 1 or 2):
         file.write(version_replaced)
         
     return ".".join(new_version)
-    
+
+
+def __delete_files_in_folder(folder_path):
+    try:
+        # Get the list of files in the folder
+        files = os.listdir(folder_path)
+
+        # Iterate through the files and delete each one
+        for file_name in files:
+            file_path = os.path.join(folder_path, file_name)
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+
+        print(f"All files in {folder_path} have been deleted.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
 
 def main():
     try:
@@ -90,8 +105,17 @@ def main():
         os.system("git add .")
         os.system(f"git commit{amend_text} -m \"{new_v} | {commit_title}\" -m \"{commit_description}\"")
         
-        try:
+        def push_next():
             os.system("git push")
+            
+            __delete_files_in_folder(os.path.join(os.path.dirname(os.path.abspath(__file__)), "dist"))
+            os.system("python -m build")
+            os.system("python -m twine upload --verbose --repository  testpypi dist/*")
+            os.system("python -m pip install --index-url https://test.pypi.org/simple/ --no-deps --upgrade zenyx")
+            
+        
+        try:
+            push_next()
         except: 
             print("failed to push to current branch")
     except ValueError:
