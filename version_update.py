@@ -121,10 +121,10 @@ def main():
                 print("Version already uploaded")
                 
             __range = 10
-            print(f"Waiting for package upload... ({__range}s)")
+            print(f"Waiting for package upload... ({__range}s)", end="")
             for i in range(__range):
                 time.sleep(1)
-                print(f"Waiting for package upload... ({i}s)", end="\r")
+                print(f"Waiting for package upload... ({__range - i}s)", end="\r")
                 
             os.system("python -m pip install --index-url https://test.pypi.org/simple/ --no-deps --upgrade zenyx")
             
