@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "zenyx"
-version = "0.10.1"
+version = "0.10.2"
 authors = [
   { name="zewenn", email="zc.fallens@gamil.com" },
 ]

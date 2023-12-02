@@ -3,7 +3,7 @@ import os
 import re
 import time
 
-
+DISABLE_PUBLISH = True
 root_folder = "\\".join(__file__.split("\\")[0:-1])
 
 def __get_current_version() -> str:
@@ -112,6 +112,9 @@ def main():
         
         def push_next():
             os.system("git push")
+            
+            if DISABLE_PUBLISH:
+                return
             
             __delete_files_in_folder(os.path.join(os.path.dirname(os.path.abspath(__file__)), "dist"))
             os.system("python -m build")

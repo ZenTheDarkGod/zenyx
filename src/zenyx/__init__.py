@@ -1,6 +1,6 @@
 """
 # zenyx
-version 0.10.1\n
+version 0.10.2\n
 
 ## pyon (python obejct notation)
 Enables convertion from objects into JSON and back. 
