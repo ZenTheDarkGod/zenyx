@@ -1,2 +1,7 @@
-# Python-Tools
-A library of useful python tools such as pyon, the json to python object loader...
+# Zenyx
+The best Python Object Notation library there is.
+
+## Install
+```bash
+python -m pip install --index-url https://test.pypi.org/simple/ --no-deps zenyx
+```

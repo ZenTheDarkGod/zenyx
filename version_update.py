@@ -5,7 +5,7 @@ import re
 root_folder = "\\".join(__file__.split("\\")[0:-1])
 
 def __get_current_version() -> str:
-    with open(os.path.join(root_folder, "zenyx", "__init__.py")) as read_file:
+    with open(os.path.join(root_folder, "src", "zenyx", "__init__.py")) as read_file:
         pattern = r'\b\d+\.\d+\.\d+\b'
         version_numbers = re.findall(pattern, read_file.read())
         return version_numbers[0]
@@ -47,7 +47,12 @@ def __update_version(update_type: 0 or 1 or 2):
         new_version.append(str(x))
     
     
-    with open(os.path.join(root_folder, "zenyx", "__init__.py"), "r+") as file:
+    with open(os.path.join(root_folder, "src", "zenyx", "__init__.py"), "r+") as file:
+        version_replaced: str = __replace_first_version(file.read(), ".".join(new_version))
+        file.seek(0)
+        file.write(version_replaced)
+        
+    with open(os.path.join(root_folder, "pyproject.toml"), "r+") as file:
         version_replaced: str = __replace_first_version(file.read(), ".".join(new_version))
         file.seek(0)
         file.write(version_replaced)
