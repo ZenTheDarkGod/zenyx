@@ -119,8 +119,13 @@ def main():
                 os.system("python -m twine upload --verbose --repository  testpypi dist/*")
             except:
                 print("Version already uploaded")
-            print("Waiting for package upload (5s)...")
-            time.sleep(5)
+                
+            __range = 10
+            print(f"Waiting for package upload... ({__range}s)")
+            for i in range(__range):
+                time.sleep(1)
+                print(f"Waiting for package upload... ({i}s)", end="\r")
+                
             os.system("python -m pip install --index-url https://test.pypi.org/simple/ --no-deps --upgrade zenyx")
             
         
