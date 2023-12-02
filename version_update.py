@@ -36,6 +36,8 @@ def __update_version(update_type: 0 or 1 or 2):
     new_version = []
     
     match update_type:
+        case 0:
+            pass
         case 1:
             __new_version[2] = 0
         case 2:
