@@ -7,97 +7,6 @@ from dataclasses import dataclass
 import re
 import os
 
-__debug_setting: bool = False
-__debug_file: str = "pyon.debug.md"
-__debug_path: str = ""
-
-# Done
-# def __get_console_time():
-#     # Get the current time
-#     current_time = datetime.datetime.now().time()
-#     # Format the time as "hh:mm:ss:ms"
-#     formatted_time = current_time.strftime("%H:%M:%S:%f")[:-3]
-#     return formatted_time
-
-# Done
-# def debug(path: str):
-#     """## THIS WILL SLOW DOWN PYON BY ~300%
-#     Enables the debug feature.
-#     The debug file will be saved as `pyon.debug.txt`.\n
-#     For now it only contains the following:
-#     - deep_serialize
-#     - deep_parse
-
-#     Args:
-#         path (str): just use `__file__`
-#     """
-#     global __debug_setting
-#     global __debug_file
-#     global __debug_path
-    
-#     __debug_path = os.path.join(os.path.dirname(os.path.abspath(path)), __debug_file)
-    
-#     __debug_setting = True
-#     with open(__debug_path, "w") as write:
-#         write.write("")
-
-# done
-# def __debug(*args: str):
-#     global __debug_setting
-#     global __debug_file
-    
-#     if (__debug_setting):
-#         print(*args)
-#         time_text = f"\n<br>`{__get_console_time()}` | "
-        
-#         def replace_newlines(input_string, _with):
-#             # Define a pattern to match newline characters outside triple backticks
-#             pattern = re.compile(r'(```[^`]*```)|\n')
-
-#             # Replace newline characters with the specified replacement except those inside triple backticks
-#             result_string = pattern.sub(lambda match: match.group(1) if match.group(1) else _with, input_string)
-
-#             return result_string
-        
-#         with open(__debug_path, "a") as wf:
-#             wf.write(time_text)
-#             __arglist = list(args)
-#             __arglist.append("\n")
-#             for arg in __arglist:
-#                 if (arg.startswith("\t")):
-#                     arglist = list(arg)
-#                     arglist.insert(0, "  ")
-#                     arg = "Đ".join(arglist).replace("Đ", "")
-#                 if (arg.__contains__("\n\t")):
-#                     arg = arg.replace("\n\t", "\n  \t")
-                    
-#                 arg = arg.replace("\t", "\t&emsp;")
-#                 arg = replace_newlines(arg, time_text)
-#                 # arg = replace_newlines(arg, "<br>")
-                
-                    
-#                 wf.write(arg)
-
-# def __debug_separator(*args, xdent: int = 1, callbackorigin: int = 0, text: str = "", title: str = ""):
-#     callbackorigin_text = ""
-#     xdent_text = ""
-#     length = 64
-    
-#     if (callbackorigin != 0):
-#         callbackorigin_text = f" - Caller: {callbackorigin}"
-    
-#     if (xdent != 0):
-#         xdent_text = f": {xdent}"
-        
-#     if (text != ""):
-#         text = f" {text}"
-        
-#     line_start_text = f" [{title}{xdent_text}{callbackorigin_text}]{text} "
-#     spacing = "="*(int((length-len(line_start_text))/2))
-#     ret_text = f"{spacing}{line_start_text}{spacing}"
-    
-#     return (f"\n**`{ret_text[0:length]}`**\n")
-
 def is_type(value: any, _type):
     debug.log(f"  **`[TypeCheck]`** Checking Type \n\tValue: `{value}`, \n\tType(s): `{_type}`")
     if type(value) is _type:
@@ -106,8 +15,6 @@ def is_type(value: any, _type):
         if type(value) in _type:
             return True
     return False
-
-
 
 
 
@@ -126,7 +33,7 @@ class debug:
             
     
     debugger: debug_object or None = None
-    __indent = 1
+    indent = 1
     
     @staticmethod
     def init(path, *args: str, filename: str = ""):
@@ -146,26 +53,29 @@ class debug:
             raise Exception("Can't initalize multiple debuggers :(")
     
     @staticmethod
-    def __get_console_time():
-        # Get the current time
+    def __get_console_time() -> str:
+        """Format the debug time to be hh:mm:ss:ms
+
+        Returns:
+            str: hh:mm:ss:ms
+        """
+        
         current_time = datetime.datetime.now().time()
-        # Format the time as "hh:mm:ss:ms"
         formatted_time = current_time.strftime("%H:%M:%S:%f")[:-3]
+        
         return formatted_time
     
     @staticmethod
-    def log(*args: str):
+    def log(*args: str) -> None:
+        """This is the log function. When called, `args` will be saved to the debug file."""
+        
         if debug.debugger == None:
             return
         
-        print(*args)
         time_text = f"\n<br>`{debug.__get_console_time()}` | "
         
         def replace_newlines(input_string, _with):
-            # Define a pattern to match newline characters outside triple backticks
             pattern = re.compile(r'(```[^`]*```)|\n')
-
-            # Replace newline characters with the specified replacement except those inside triple backticks
             result_string = pattern.sub(lambda match: match.group(1) if match.group(1) else _with, input_string)
 
             return result_string
@@ -189,7 +99,19 @@ class debug:
                 wf.write(arg)
     
     @staticmethod
-    def separator_text(*args, xdent: int = 1, callbackorigin: int = 0, text: str = "", title: str = ""):
+    def separator_text(*args, xdent: int = 1, callbackorigin: int = 0, text: str = "", title: str = "") -> str:
+        """Used to print a headline in the debug file
+
+        Args:
+            xdent (int, optional): The recursion count (how much the indent of the recursivity is). Defaults to 1.
+            callbackorigin (int, optional): The caller function's recursion count. Defaults to 0.
+            text (str, optional): Smaller titles. (e.g.: "List Serialized") Defaults to "".
+            title (str, optional): The title. Defaults to "".
+
+        Returns:
+            str: The markdown separator text
+        """
+        
         callbackorigin_text = ""
         xdent_text = ""
         length = 64
@@ -209,24 +131,30 @@ class debug:
         
         return (f"\n**`{ret_text[0:length]}`**\n")
 
+
+
+
+
+
+
 def deep_serialize(obj: any, *args, callbacktime:int = 0) -> dict:
+    """Converts the object to a dictionary, makes it saveable to a JSON.
+    Aslo converts every attribute of the object which were objects\n
+    Args:
+        obj (any): the object you wish to deep serialize
+    Returns:
+        dict: the deep serialized object (as a dict)
+    """
+    
     debug.log(debug.separator_text(title="Deep Serialize", xdent=0, callbackorigin=callbacktime))
-    global __debug_setting
     xdent = 1
-    if __debug_setting:
-        xdent = copy.deepcopy(debug.__indent)
-        debug.__indent += 1
+    if debug.debugger != None:
+        xdent = copy.deepcopy(debug.indent)
+        debug.indent += 1
         
     # __debug(f"\n[Start - {xdent} - Caller: {callbacktime}]","="*20)
     debug.log(debug.separator_text(title="Start", xdent=xdent, callbackorigin=callbacktime))
     
-    """Converts the object to a dictionary, makes it saveable to a JSON.
-    Aslo converts every attribute of the object which were objects\n
-    Args:
-        obj (any): the object you wish wo deep convert
-    Returns:
-        dict: _description_
-    """
     
     debug.log(f"  **`[{xdent}]`** Original obj input:\n", f"\t`{obj}`")
     
@@ -247,8 +175,18 @@ def deep_serialize(obj: any, *args, callbacktime:int = 0) -> dict:
         Returns:
             bool: whether the value is an object or not
         """
-        excluded_types = (int, float, complex, str, bool, list, tuple, dict, set)
-        return (hasattr(value, "__dict__") and not isinstance(value, excluded_types))
+        
+        excluded_types = (int, float, complex, str, bool, list, dict, set)
+        return (
+            (
+                # object cannot be any of the excluded datatypes AND TUPLES
+                (hasattr(value, "__dict__")) and not isinstance(value, (*excluded_types, tuple))
+            ) or 
+            (
+                # namedTUPLES can be TUPLES
+                hasattr(value, "_asdict") and not isinstance(value, excluded_types)
+            )
+        )
     
     def __is_iterable(value: any) -> bool:
         """### THIS IS AN INNER FUNCTION, CAN'T BE USED ELSEWHERE
@@ -276,6 +214,7 @@ def deep_serialize(obj: any, *args, callbacktime:int = 0) -> dict:
     if not __is_iterable(obj):
         debug.log(debug.separator_text(title="Early End", text="Not Iterable", xdent=xdent, callbackorigin=callbacktime))
         return obj
+    
     # If the obj is already a dict, just use it as the base
     if (is_type(obj, dict)):
         new_dict: dict = copy.deepcopy(obj)
@@ -297,9 +236,12 @@ def deep_serialize(obj: any, *args, callbacktime:int = 0) -> dict:
             # it's a namedtuple
             new_dict = copy.deepcopy(obj)._asdict()
         new_dict['PYON_TYPE'] = str(obj.__class__.__name__)
-        
+    
+    if ((not hasattr(obj, "_asdict")) and is_type(obj, tuple)):
+        obj = list(obj)
+    
     # Handling list[list[list[object]]] edge cases
-    if (is_type(obj, (list, tuple))):
+    if is_type(obj, list):
         for index, element in enumerate(obj):
             debug.log(f"  **`[{xdent}]`** Iterating List/Tuple:\n", f"\tList/Tuple *(`obj`)*: `{obj}`\n\tElement: `{element}`")
             if __is_iterable(element):
@@ -311,16 +253,17 @@ def deep_serialize(obj: any, *args, callbacktime:int = 0) -> dict:
     # At this point new_dict is a dictionary, containing all keys and all values of the object/dict
     for key, value in new_dict.items():
         # Object(ls=[Object2()])
-        if is_type(value, (list, tuple)): 
+        if is_type(value, list): 
             for i, item in enumerate(value):
                 if __is_iterable(item):
-                    value[i] = __self_call(item)
+                    new_dict[key][i] = __self_call(item)
         
         # Object(asd={asd: Object2()})
-        if is_type(value, dict) or hasattr(value, "pyon_converted"):
-            for key, value2 in value.items():
+        if is_type(value, dict) or hasattr(value, "_asdict"):
+            for key2, value2 in value.items():
                 if __is_iterable(value2):
-                    value[key] = __self_call(value2)
+                    new_dict[key][key2] = __self_call(value2)
+                    
         # value is Object
         if __is_object(value):
             new_dict[key] = __self_call(value)
@@ -329,7 +272,7 @@ def deep_serialize(obj: any, *args, callbacktime:int = 0) -> dict:
     debug.log(debug.separator_text(title="End", xdent=xdent, callbackorigin=callbacktime))
     
     if (xdent == 1):
-        debug.__indent = 1
+        debug.indent = 1
     
     return new_dict
 
@@ -347,9 +290,9 @@ def deep_parse(olddict: dict or list, *args: str, callbacktime: int = 0) -> obje
     debug.log(debug.separator_text(title="Deep Parse", xdent=0, callbackorigin=callbacktime))
     
     xdent = 1
-    if __debug_setting:
-        xdent = copy.deepcopy(debug.__indent)
-        debug.__indent += 1
+    if debug.debugger != None:
+        xdent = copy.deepcopy(debug.indent)
+        debug.indent += 1
         
     
     def __self_call(obj: any):
@@ -389,6 +332,7 @@ def deep_parse(olddict: dict or list, *args: str, callbacktime: int = 0) -> obje
     def __end(text: any):
         debug.log(f"  **`[{xdent}]`** Return Value: \n\t`{text}`")
         debug.log(debug.separator_text(title="End", xdent=xdent, callbackorigin=callbacktime))
+        debug.indent = 1
     
     if class_type != "&DICT":
         params["pyon_converted"] = True
@@ -401,7 +345,7 @@ def deep_parse(olddict: dict or list, *args: str, callbacktime: int = 0) -> obje
     
     
     if (xdent == 1):
-        debug.__indent = 1
+        debug.indent = 1
     
     return olddict
     

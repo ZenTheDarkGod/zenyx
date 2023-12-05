@@ -3,7 +3,7 @@ import os
 import re
 import time
 
-DISABLE_PUBLISH = True
+DISABLE_PUBLISH = False
 root_folder = "\\".join(__file__.split("\\")[0:-1])
 
 def __get_current_version() -> str:

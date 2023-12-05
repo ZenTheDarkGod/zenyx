@@ -5,4 +5,4 @@ from dataclasses import dataclass
 class test:
     param: any
 
-demo_obj = test([test({"test": 0}), "asd"])
+demo_obj = test([test({"test": (10, 10)}), "asd"])
