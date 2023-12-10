@@ -1,6 +1,6 @@
 """
 # zenyx
-version 0.11.0\n
+version 0.11.1\n
 
 ## pyon (python obejct notation)
 Enables convertion from objects into JSON and back. 
@@ -20,6 +20,6 @@ Runtime import and/or install of modules
 Implemented in: `require`
 """
 
-from src.zenyx import pyon, require, streams
+from zenyx import pyon, require, streams
 
 
