@@ -119,7 +119,7 @@ def main():
             __delete_files_in_folder(os.path.join(os.path.dirname(os.path.abspath(__file__)), "dist"))
             os.system("python -m build")
             try:
-                os.system("python -m twine upload --verbose --repository  testpypi dist/*")
+                os.system("python -m twine upload --verbose dist/*")
             except:
                 print("Version already uploaded")
                 
