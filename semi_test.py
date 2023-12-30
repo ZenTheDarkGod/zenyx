@@ -1,7 +1,5 @@
 
-import src.zenyx as tzenyx
-from src.zenyx import printf
-import tests.databank as db
+from zenyx import printf
 
 def test_one():
     printf.clear_screen()
