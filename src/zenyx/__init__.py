@@ -21,6 +21,6 @@ Implemented in: `require`
 """
 
 from zenyx import pyon, require, streams
-
+from zenyx.console import printf
 
 
