@@ -1,7 +1,10 @@
 # Zenyx
 The best Python Object Notation library there is.
 
+*--- documentation coming soon ---*
+
+
 ## Install
 ```powershell
-python -m pip install --index-url https://test.pypi.org/simple/ --no-deps --upgrade zenyx
+python -m pip install --upgrade zenyx
 ```

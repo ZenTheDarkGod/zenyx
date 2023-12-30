@@ -129,7 +129,7 @@ def main():
                 time.sleep(1)
                 print(f"Waiting for package upload... ({__range - i}s)      ", end="\r")
                 
-            os.system("python -m pip install --index-url https://test.pypi.org/simple/ --no-deps --upgrade zenyx")
+            os.system("python -m pip install --upgrade zenyx")
             
         
         try:
