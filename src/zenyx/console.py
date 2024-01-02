@@ -5,10 +5,10 @@ from termcolor import colored
 
 class printf:
     """
-    '@!{text}$&' => Bold text
-    '@?{text}$&' => Italic text
-    '@~{text}$&' => Dim text
-    '@_{text}$&' => Underlined text
+    `@!{text}$&` => Bold text \n
+    `@?{text}$&` => Italic text \n
+    `@~{text}$&` => Dim text \n
+    `@_{text}$&` => Underlined text \n
 
 
     """
@@ -43,9 +43,19 @@ class printf:
         print(*args_filtered, **kwargs)
         return None
 
-    def full_line(content: str) -> None:
+    def full_line(*args, **kwargs) -> None:
         terminal_width: int = os.get_terminal_size().columns
-        print(f'{printf.__filter(content)}{" "*(terminal_width - len(printf.__rm_filter(content)))}')
+        joiner = " "
+        if kwargs.get("sep"):
+            joiner = kwargs.get("sep")
+
+        content = joiner.join(args)
+
+        printf(f'{printf.__filter(content)}{" "*(terminal_width - len(printf.__rm_filter(content)))}', **kwargs)
+
+    def print_full_height() -> None:
+        for i in range(os.get_terminal_size().lines - 1):
+            printf.full_line(end="\n")
 
     def endl(times: int = 1):
         print("\n" * times, end="")
@@ -54,11 +64,10 @@ class printf:
         width: int = os.get_terminal_size().columns
         mid_text: str = f" {content} "
         side_width: int = int((width - len(printf.__rm_filter(mid_text))) / 2)
-        mid_text = printf.__filter(mid_text)
 
         sep_text = "─" * side_width
         printf.endl(5)
-        print(f"{sep_text}{mid_text}{sep_text}")
+        printf(f"{sep_text}{mid_text}{sep_text}")
         printf.endl()
 
     def clear_screen() -> None:
