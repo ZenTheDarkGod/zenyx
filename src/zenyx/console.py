@@ -37,7 +37,7 @@ class printf:
         args_filtered = []
         for arg in args:
             args_filtered.append(
-                printf.__filter(arg)
+                printf.__filter(f"{arg}")
             )
 
         print(*args_filtered, **kwargs)
