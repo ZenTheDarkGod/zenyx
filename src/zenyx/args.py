@@ -60,6 +60,24 @@ class Arguments:
         
         """
 
+        quote_opened: bool = False
+        quote_start: int = 0
+
+
+        for index, kw in enumerate(self.args):
+            if kw.startswith("\""):
+                quote_opened = True
+                quote_start = index
+            if quote_opened and kw.endswith("\""):
+                quote_opened = False
+            
+            if quote_opened and index != quote_start:
+                self.args[quote_start] += kw
+                del self.args[index]
+
+
+            
+
         skipnext: bool = False
         for index, arg in enumerate(self.args):
             if skipnext:
@@ -76,6 +94,6 @@ class Arguments:
                 self.modifiers[arg[1:]] = self.args[index + 1]
                 skipnext = True
                 continue
-
+            
             self.normals.append(arg)
                 
