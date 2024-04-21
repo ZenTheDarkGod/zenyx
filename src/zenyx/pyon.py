@@ -260,7 +260,7 @@ def deep_serialize(obj: any, *args, callbacktime:int = 0) -> dict:
                     new_dict[key][i] = __self_call(item)
         
         # Object(asd={asd: Object2()})
-        if is_type(value, dict) or hasattr(value, "_asdict"):
+        if is_type(value, dict):
             for key2, value2 in value.items():
                 if __is_iterable(value2):
                     new_dict[key][key2] = __self_call(value2)
