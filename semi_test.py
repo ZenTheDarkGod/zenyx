@@ -1,18 +1,10 @@
 
-from src.zenyx import printf, Arguments
+import src.zenyx as zenyx
 import sys
-
-ARGS = Arguments(sys.argv)
+import tests.databank as db
 
 def test_one():
-    printf.clear_screen()
-    printf.full()
-    printf.title("@!Bold ass$& / bitches", " ")
-    printf.full_line("asd", "asd", sep="-")
-
-    printf(f"{ARGS.normals} | {ARGS.modifiers} | {ARGS.tags}")
-    printf(ARGS.tagged("run"))
-    printf(ARGS.tagged("build"))
-    printf(ARGS.get_modifier_value("mode"))
+    zenyx.pyon.debug.init(__file__)
+    print(zenyx.pyon.deep_serialize(db.demo_obj))
 
 test_one()

@@ -1598,3 +1598,1135 @@
 <br>`14:54:07:551` | **`=========================== [End: 1] ===========================`**
 <br>`14:54:07:551` | 
 <br>`14:54:07:551` | 
+<br>`13:56:30:837` | 
+<br>`13:56:30:837` | **`======================= [Deep Serialize] =======================`**
+<br>`13:56:30:837` | 
+<br>`13:56:30:837` | 
+<br>`13:56:30:837` | 
+<br>`13:56:30:837` | **`========================== [Start: 1] ==========================`**
+<br>`13:56:30:837` | 
+<br>`13:56:30:837` | 
+<br>`13:56:30:837` |   **`[1]`** Original obj input:
+<br>`13:56:30:837` |   	&emsp;`test(param=[test(param={'test': (10, 10)}), 'asd'])`
+<br>`13:56:30:837` | 
+<br>`13:56:30:837` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:837` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:56:30:837` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:837` | 
+<br>`13:56:30:837` |   **`[1]`** Iterability test:
+<br>`13:56:30:837` |   	&emsp;**Params:**
+<br>`13:56:30:837` |   	&emsp;	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`
+<br>`13:56:30:837` |   	&emsp;	&emsp;@Type: `<class 'databank.test'>`
+<br>`13:56:30:837` |   	&emsp;Is object *(`__is_object`)*: `True`
+<br>`13:56:30:837` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:56:30:837` |   	&emsp;**Final Resoult**: `True`
+<br>`13:56:30:837` | 
+<br>`13:56:30:838` |   **`[1]`** Original Obj Iterability *(can be `False`)*:
+<br>`13:56:30:838` |   	&emsp;Object *(`obj`)*: `test(param=[test(param={'test': (10, 10)}), 'asd'])` 
+<br>`13:56:30:838` |   	&emsp;**Is object iterable**: `True`
+<br>`13:56:30:838` | 
+<br>`13:56:30:838` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:838` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:56:30:838` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:838` | 
+<br>`13:56:30:838` |   **`[1]`** Iterability test:
+<br>`13:56:30:838` |   	&emsp;**Params:**
+<br>`13:56:30:838` |   	&emsp;	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`
+<br>`13:56:30:838` |   	&emsp;	&emsp;@Type: `<class 'databank.test'>`
+<br>`13:56:30:838` |   	&emsp;Is object *(`__is_object`)*: `True`
+<br>`13:56:30:838` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:56:30:838` |   	&emsp;**Final Resoult**: `True`
+<br>`13:56:30:838` | 
+<br>`13:56:30:838` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:838` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:56:30:838` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:56:30:838` | 
+<br>`13:56:30:838` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:838` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:56:30:838` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:56:30:838` | 
+<br>`13:56:30:838` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:838` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:56:30:838` |   	&emsp;Type(s): `<class 'tuple'>`
+<br>`13:56:30:838` | 
+<br>`13:56:30:839` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:839` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:56:30:839` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:56:30:839` | 
+<br>`13:56:30:839` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:839` |   	&emsp;Value: `[test(param={'test': (10, 10)}), 'asd']`, 
+<br>`13:56:30:839` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:56:30:839` | 
+<br>`13:56:30:839` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:839` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:56:30:839` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:839` | 
+<br>`13:56:30:839` |   **`[1]`** Iterability test:
+<br>`13:56:30:839` |   	&emsp;**Params:**
+<br>`13:56:30:839` |   	&emsp;	&emsp;Value: `test(param={'test': (10, 10)})`
+<br>`13:56:30:839` |   	&emsp;	&emsp;@Type: `<class 'databank.test'>`
+<br>`13:56:30:839` |   	&emsp;Is object *(`__is_object`)*: `True`
+<br>`13:56:30:839` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:56:30:839` |   	&emsp;**Final Resoult**: `True`
+<br>`13:56:30:839` | 
+<br>`13:56:30:839` | 
+<br>`13:56:30:839` | **`================= [Deep Serialize - Caller: 1] =================`**
+<br>`13:56:30:839` | 
+<br>`13:56:30:839` | 
+<br>`13:56:30:839` | 
+<br>`13:56:30:839` | **`==================== [Start: 2 - Caller: 1] ====================`**
+<br>`13:56:30:839` | 
+<br>`13:56:30:839` | 
+<br>`13:56:30:839` |   **`[2]`** Original obj input:
+<br>`13:56:30:839` |   	&emsp;`test(param={'test': (10, 10)})`
+<br>`13:56:30:839` | 
+<br>`13:56:30:840` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:840` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:56:30:840` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:840` | 
+<br>`13:56:30:840` |   **`[2]`** Iterability test:
+<br>`13:56:30:840` |   	&emsp;**Params:**
+<br>`13:56:30:840` |   	&emsp;	&emsp;Value: `test(param={'test': (10, 10)})`
+<br>`13:56:30:840` |   	&emsp;	&emsp;@Type: `<class 'databank.test'>`
+<br>`13:56:30:840` |   	&emsp;Is object *(`__is_object`)*: `True`
+<br>`13:56:30:840` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:56:30:840` |   	&emsp;**Final Resoult**: `True`
+<br>`13:56:30:840` | 
+<br>`13:56:30:840` |   **`[2]`** Original Obj Iterability *(can be `False`)*:
+<br>`13:56:30:840` |   	&emsp;Object *(`obj`)*: `test(param={'test': (10, 10)})` 
+<br>`13:56:30:840` |   	&emsp;**Is object iterable**: `True`
+<br>`13:56:30:840` | 
+<br>`13:56:30:840` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:840` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:56:30:840` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:840` | 
+<br>`13:56:30:840` |   **`[2]`** Iterability test:
+<br>`13:56:30:840` |   	&emsp;**Params:**
+<br>`13:56:30:840` |   	&emsp;	&emsp;Value: `test(param={'test': (10, 10)})`
+<br>`13:56:30:840` |   	&emsp;	&emsp;@Type: `<class 'databank.test'>`
+<br>`13:56:30:840` |   	&emsp;Is object *(`__is_object`)*: `True`
+<br>`13:56:30:840` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:56:30:840` |   	&emsp;**Final Resoult**: `True`
+<br>`13:56:30:840` | 
+<br>`13:56:30:841` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:841` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:56:30:841` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:56:30:841` | 
+<br>`13:56:30:841` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:841` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:56:30:841` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:56:30:841` | 
+<br>`13:56:30:841` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:841` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:56:30:841` |   	&emsp;Type(s): `<class 'tuple'>`
+<br>`13:56:30:841` | 
+<br>`13:56:30:841` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:841` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:56:30:841` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:56:30:841` | 
+<br>`13:56:30:841` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:841` |   	&emsp;Value: `{'test': (10, 10)}`, 
+<br>`13:56:30:841` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:56:30:841` | 
+<br>`13:56:30:841` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:841` |   	&emsp;Value: `{'test': (10, 10)}`, 
+<br>`13:56:30:841` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:56:30:841` | 
+<br>`13:56:30:842` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:842` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:56:30:842` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:842` | 
+<br>`13:56:30:842` |   **`[2]`** Iterability test:
+<br>`13:56:30:842` |   	&emsp;**Params:**
+<br>`13:56:30:842` |   	&emsp;	&emsp;Value: `(10, 10)`
+<br>`13:56:30:842` |   	&emsp;	&emsp;@Type: `<class 'tuple'>`
+<br>`13:56:30:842` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:56:30:842` |   	&emsp;Is dict/list/tuple *(`test1`)*: `True`
+<br>`13:56:30:842` |   	&emsp;**Final Resoult**: `True`
+<br>`13:56:30:842` | 
+<br>`13:56:30:843` | 
+<br>`13:56:30:843` | **`================= [Deep Serialize - Caller: 2] =================`**
+<br>`13:56:30:843` | 
+<br>`13:56:30:843` | 
+<br>`13:56:30:843` | 
+<br>`13:56:30:843` | **`==================== [Start: 3 - Caller: 2] ====================`**
+<br>`13:56:30:843` | 
+<br>`13:56:30:843` | 
+<br>`13:56:30:843` |   **`[3]`** Original obj input:
+<br>`13:56:30:843` |   	&emsp;`(10, 10)`
+<br>`13:56:30:843` | 
+<br>`13:56:30:843` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:843` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:56:30:843` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:843` | 
+<br>`13:56:30:843` |   **`[3]`** Iterability test:
+<br>`13:56:30:843` |   	&emsp;**Params:**
+<br>`13:56:30:843` |   	&emsp;	&emsp;Value: `(10, 10)`
+<br>`13:56:30:843` |   	&emsp;	&emsp;@Type: `<class 'tuple'>`
+<br>`13:56:30:843` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:56:30:843` |   	&emsp;Is dict/list/tuple *(`test1`)*: `True`
+<br>`13:56:30:843` |   	&emsp;**Final Resoult**: `True`
+<br>`13:56:30:843` | 
+<br>`13:56:30:843` |   **`[3]`** Original Obj Iterability *(can be `False`)*:
+<br>`13:56:30:843` |   	&emsp;Object *(`obj`)*: `(10, 10)` 
+<br>`13:56:30:843` |   	&emsp;**Is object iterable**: `True`
+<br>`13:56:30:843` | 
+<br>`13:56:30:843` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:843` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:56:30:843` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:843` | 
+<br>`13:56:30:844` |   **`[3]`** Iterability test:
+<br>`13:56:30:844` |   	&emsp;**Params:**
+<br>`13:56:30:844` |   	&emsp;	&emsp;Value: `(10, 10)`
+<br>`13:56:30:844` |   	&emsp;	&emsp;@Type: `<class 'tuple'>`
+<br>`13:56:30:844` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:56:30:844` |   	&emsp;Is dict/list/tuple *(`test1`)*: `True`
+<br>`13:56:30:844` |   	&emsp;**Final Resoult**: `True`
+<br>`13:56:30:844` | 
+<br>`13:56:30:844` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:844` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:56:30:844` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:56:30:844` | 
+<br>`13:56:30:844` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:844` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:56:30:844` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:56:30:844` | 
+<br>`13:56:30:844` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:844` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:56:30:844` |   	&emsp;Type(s): `<class 'tuple'>`
+<br>`13:56:30:844` | 
+<br>`13:56:30:844` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:844` |   	&emsp;Value: `[10, 10]`, 
+<br>`13:56:30:844` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:56:30:844` | 
+<br>`13:56:30:844` |   **`[3]`** Iterating List/Tuple:
+<br>`13:56:30:844` |   	&emsp;List/Tuple *(`obj`)*: `[10, 10]`
+<br>`13:56:30:844` |   	&emsp;Element: `10`
+<br>`13:56:30:844` | 
+<br>`13:56:30:844` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:844` |   	&emsp;Value: `10`, 
+<br>`13:56:30:844` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:844` | 
+<br>`13:56:30:844` |   **`[3]`** Iterability test:
+<br>`13:56:30:844` |   	&emsp;**Params:**
+<br>`13:56:30:844` |   	&emsp;	&emsp;Value: `10`
+<br>`13:56:30:844` |   	&emsp;	&emsp;@Type: `<class 'int'>`
+<br>`13:56:30:844` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:56:30:844` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:56:30:844` |   	&emsp;**Final Resoult**: `False`
+<br>`13:56:30:844` | 
+<br>`13:56:30:845` |   **`[3]`** Iterating List/Tuple:
+<br>`13:56:30:845` |   	&emsp;List/Tuple *(`obj`)*: `[10, 10]`
+<br>`13:56:30:845` |   	&emsp;Element: `10`
+<br>`13:56:30:845` | 
+<br>`13:56:30:845` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:845` |   	&emsp;Value: `10`, 
+<br>`13:56:30:845` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:845` | 
+<br>`13:56:30:845` |   **`[3]`** Iterability test:
+<br>`13:56:30:845` |   	&emsp;**Params:**
+<br>`13:56:30:845` |   	&emsp;	&emsp;Value: `10`
+<br>`13:56:30:845` |   	&emsp;	&emsp;@Type: `<class 'int'>`
+<br>`13:56:30:845` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:56:30:845` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:56:30:845` |   	&emsp;**Final Resoult**: `False`
+<br>`13:56:30:845` | 
+<br>`13:56:30:845` | 
+<br>`13:56:30:845` | **`========== [Early End: 3 - Caller: 2] List Serialized ==========`**
+<br>`13:56:30:845` | 
+<br>`13:56:30:845` | 
+<br>`13:56:30:845` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:845` |   	&emsp;Value: `test`, 
+<br>`13:56:30:845` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:56:30:845` | 
+<br>`13:56:30:845` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:845` |   	&emsp;Value: `test`, 
+<br>`13:56:30:845` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:56:30:845` | 
+<br>`13:56:30:845` |   **`[2]`** **New dict created:**
+<br>`13:56:30:845` |   	&emsp;`{'param': {'test': [10, 10]}, 'PYON_TYPE': 'test'}`
+<br>`13:56:30:845` | 
+<br>`13:56:30:845` | 
+<br>`13:56:30:845` | **`===================== [End: 2 - Caller: 1] =====================`**
+<br>`13:56:30:845` | 
+<br>`13:56:30:845` | 
+<br>`13:56:30:845` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:845` |   	&emsp;Value: `asd`, 
+<br>`13:56:30:845` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:845` | 
+<br>`13:56:30:845` |   **`[1]`** Iterability test:
+<br>`13:56:30:845` |   	&emsp;**Params:**
+<br>`13:56:30:845` |   	&emsp;	&emsp;Value: `asd`
+<br>`13:56:30:845` |   	&emsp;	&emsp;@Type: `<class 'str'>`
+<br>`13:56:30:845` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:56:30:845` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:56:30:845` |   	&emsp;**Final Resoult**: `False`
+<br>`13:56:30:845` | 
+<br>`13:56:30:846` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:846` |   	&emsp;Value: `[{'param': {'test': [10, 10]}, 'PYON_TYPE': 'test'}, 'asd']`, 
+<br>`13:56:30:846` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:56:30:846` | 
+<br>`13:56:30:846` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:846` |   	&emsp;Value: `test`, 
+<br>`13:56:30:846` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:56:30:846` | 
+<br>`13:56:30:846` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:846` |   	&emsp;Value: `test`, 
+<br>`13:56:30:846` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:56:30:846` | 
+<br>`13:56:30:846` |   **`[1]`** **New dict created:**
+<br>`13:56:30:846` |   	&emsp;`{'param': [{'param': {'test': [10, 10]}, 'PYON_TYPE': 'test'}, 'asd'], 'PYON_TYPE': 'test'}`
+<br>`13:56:30:846` | 
+<br>`13:56:30:846` | 
+<br>`13:56:30:846` | **`=========================== [End: 1] ===========================`**
+<br>`13:56:30:846` | 
+<br>`13:56:30:846` | 
+<br>`13:56:30:846` | 
+<br>`13:56:30:846` | **`======================= [Deep Serialize] =======================`**
+<br>`13:56:30:846` | 
+<br>`13:56:30:846` | 
+<br>`13:56:30:846` | 
+<br>`13:56:30:846` | **`========================== [Start: 1] ==========================`**
+<br>`13:56:30:846` | 
+<br>`13:56:30:846` | 
+<br>`13:56:30:847` |   **`[1]`** Original obj input:
+<br>`13:56:30:847` |   	&emsp;`test(param=[test(param={'test': (10, 10)}), 'asd'])`
+<br>`13:56:30:847` | 
+<br>`13:56:30:847` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:847` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:56:30:847` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:847` | 
+<br>`13:56:30:847` |   **`[1]`** Iterability test:
+<br>`13:56:30:847` |   	&emsp;**Params:**
+<br>`13:56:30:847` |   	&emsp;	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`
+<br>`13:56:30:847` |   	&emsp;	&emsp;@Type: `<class 'databank.test'>`
+<br>`13:56:30:847` |   	&emsp;Is object *(`__is_object`)*: `True`
+<br>`13:56:30:847` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:56:30:847` |   	&emsp;**Final Resoult**: `True`
+<br>`13:56:30:847` | 
+<br>`13:56:30:847` |   **`[1]`** Original Obj Iterability *(can be `False`)*:
+<br>`13:56:30:847` |   	&emsp;Object *(`obj`)*: `test(param=[test(param={'test': (10, 10)}), 'asd'])` 
+<br>`13:56:30:847` |   	&emsp;**Is object iterable**: `True`
+<br>`13:56:30:847` | 
+<br>`13:56:30:847` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:847` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:56:30:847` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:847` | 
+<br>`13:56:30:847` |   **`[1]`** Iterability test:
+<br>`13:56:30:847` |   	&emsp;**Params:**
+<br>`13:56:30:847` |   	&emsp;	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`
+<br>`13:56:30:847` |   	&emsp;	&emsp;@Type: `<class 'databank.test'>`
+<br>`13:56:30:847` |   	&emsp;Is object *(`__is_object`)*: `True`
+<br>`13:56:30:847` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:56:30:847` |   	&emsp;**Final Resoult**: `True`
+<br>`13:56:30:847` | 
+<br>`13:56:30:847` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:847` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:56:30:847` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:56:30:847` | 
+<br>`13:56:30:848` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:848` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:56:30:848` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:56:30:848` | 
+<br>`13:56:30:848` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:848` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:56:30:848` |   	&emsp;Type(s): `<class 'tuple'>`
+<br>`13:56:30:848` | 
+<br>`13:56:30:848` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:848` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:56:30:848` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:56:30:848` | 
+<br>`13:56:30:848` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:848` |   	&emsp;Value: `[test(param={'test': (10, 10)}), 'asd']`, 
+<br>`13:56:30:848` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:56:30:848` | 
+<br>`13:56:30:848` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:848` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:56:30:848` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:848` | 
+<br>`13:56:30:848` |   **`[1]`** Iterability test:
+<br>`13:56:30:848` |   	&emsp;**Params:**
+<br>`13:56:30:848` |   	&emsp;	&emsp;Value: `test(param={'test': (10, 10)})`
+<br>`13:56:30:848` |   	&emsp;	&emsp;@Type: `<class 'databank.test'>`
+<br>`13:56:30:848` |   	&emsp;Is object *(`__is_object`)*: `True`
+<br>`13:56:30:848` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:56:30:848` |   	&emsp;**Final Resoult**: `True`
+<br>`13:56:30:848` | 
+<br>`13:56:30:849` | 
+<br>`13:56:30:849` | **`================= [Deep Serialize - Caller: 1] =================`**
+<br>`13:56:30:849` | 
+<br>`13:56:30:849` | 
+<br>`13:56:30:849` | 
+<br>`13:56:30:849` | **`==================== [Start: 2 - Caller: 1] ====================`**
+<br>`13:56:30:849` | 
+<br>`13:56:30:849` | 
+<br>`13:56:30:849` |   **`[2]`** Original obj input:
+<br>`13:56:30:849` |   	&emsp;`test(param={'test': (10, 10)})`
+<br>`13:56:30:849` | 
+<br>`13:56:30:849` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:849` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:56:30:849` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:849` | 
+<br>`13:56:30:849` |   **`[2]`** Iterability test:
+<br>`13:56:30:849` |   	&emsp;**Params:**
+<br>`13:56:30:849` |   	&emsp;	&emsp;Value: `test(param={'test': (10, 10)})`
+<br>`13:56:30:849` |   	&emsp;	&emsp;@Type: `<class 'databank.test'>`
+<br>`13:56:30:849` |   	&emsp;Is object *(`__is_object`)*: `True`
+<br>`13:56:30:849` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:56:30:849` |   	&emsp;**Final Resoult**: `True`
+<br>`13:56:30:849` | 
+<br>`13:56:30:849` |   **`[2]`** Original Obj Iterability *(can be `False`)*:
+<br>`13:56:30:849` |   	&emsp;Object *(`obj`)*: `test(param={'test': (10, 10)})` 
+<br>`13:56:30:849` |   	&emsp;**Is object iterable**: `True`
+<br>`13:56:30:849` | 
+<br>`13:56:30:849` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:849` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:56:30:849` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:849` | 
+<br>`13:56:30:849` |   **`[2]`** Iterability test:
+<br>`13:56:30:849` |   	&emsp;**Params:**
+<br>`13:56:30:849` |   	&emsp;	&emsp;Value: `test(param={'test': (10, 10)})`
+<br>`13:56:30:849` |   	&emsp;	&emsp;@Type: `<class 'databank.test'>`
+<br>`13:56:30:849` |   	&emsp;Is object *(`__is_object`)*: `True`
+<br>`13:56:30:849` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:56:30:849` |   	&emsp;**Final Resoult**: `True`
+<br>`13:56:30:849` | 
+<br>`13:56:30:850` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:850` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:56:30:850` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:56:30:850` | 
+<br>`13:56:30:850` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:850` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:56:30:850` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:56:30:850` | 
+<br>`13:56:30:850` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:850` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:56:30:850` |   	&emsp;Type(s): `<class 'tuple'>`
+<br>`13:56:30:850` | 
+<br>`13:56:30:850` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:850` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:56:30:850` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:56:30:850` | 
+<br>`13:56:30:850` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:850` |   	&emsp;Value: `{'test': (10, 10)}`, 
+<br>`13:56:30:850` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:56:30:850` | 
+<br>`13:56:30:851` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:851` |   	&emsp;Value: `{'test': (10, 10)}`, 
+<br>`13:56:30:851` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:56:30:851` | 
+<br>`13:56:30:851` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:851` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:56:30:851` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:851` | 
+<br>`13:56:30:851` |   **`[2]`** Iterability test:
+<br>`13:56:30:851` |   	&emsp;**Params:**
+<br>`13:56:30:851` |   	&emsp;	&emsp;Value: `(10, 10)`
+<br>`13:56:30:851` |   	&emsp;	&emsp;@Type: `<class 'tuple'>`
+<br>`13:56:30:851` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:56:30:851` |   	&emsp;Is dict/list/tuple *(`test1`)*: `True`
+<br>`13:56:30:851` |   	&emsp;**Final Resoult**: `True`
+<br>`13:56:30:851` | 
+<br>`13:56:30:851` | 
+<br>`13:56:30:851` | **`================= [Deep Serialize - Caller: 2] =================`**
+<br>`13:56:30:851` | 
+<br>`13:56:30:851` | 
+<br>`13:56:30:851` | 
+<br>`13:56:30:851` | **`==================== [Start: 3 - Caller: 2] ====================`**
+<br>`13:56:30:851` | 
+<br>`13:56:30:851` | 
+<br>`13:56:30:851` |   **`[3]`** Original obj input:
+<br>`13:56:30:851` |   	&emsp;`(10, 10)`
+<br>`13:56:30:851` | 
+<br>`13:56:30:851` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:851` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:56:30:851` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:851` | 
+<br>`13:56:30:851` |   **`[3]`** Iterability test:
+<br>`13:56:30:851` |   	&emsp;**Params:**
+<br>`13:56:30:851` |   	&emsp;	&emsp;Value: `(10, 10)`
+<br>`13:56:30:851` |   	&emsp;	&emsp;@Type: `<class 'tuple'>`
+<br>`13:56:30:851` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:56:30:851` |   	&emsp;Is dict/list/tuple *(`test1`)*: `True`
+<br>`13:56:30:851` |   	&emsp;**Final Resoult**: `True`
+<br>`13:56:30:851` | 
+<br>`13:56:30:851` |   **`[3]`** Original Obj Iterability *(can be `False`)*:
+<br>`13:56:30:851` |   	&emsp;Object *(`obj`)*: `(10, 10)` 
+<br>`13:56:30:851` |   	&emsp;**Is object iterable**: `True`
+<br>`13:56:30:851` | 
+<br>`13:56:30:852` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:852` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:56:30:852` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:852` | 
+<br>`13:56:30:852` |   **`[3]`** Iterability test:
+<br>`13:56:30:852` |   	&emsp;**Params:**
+<br>`13:56:30:852` |   	&emsp;	&emsp;Value: `(10, 10)`
+<br>`13:56:30:852` |   	&emsp;	&emsp;@Type: `<class 'tuple'>`
+<br>`13:56:30:852` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:56:30:852` |   	&emsp;Is dict/list/tuple *(`test1`)*: `True`
+<br>`13:56:30:852` |   	&emsp;**Final Resoult**: `True`
+<br>`13:56:30:852` | 
+<br>`13:56:30:852` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:852` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:56:30:852` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:56:30:852` | 
+<br>`13:56:30:852` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:852` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:56:30:852` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:56:30:852` | 
+<br>`13:56:30:852` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:852` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:56:30:852` |   	&emsp;Type(s): `<class 'tuple'>`
+<br>`13:56:30:852` | 
+<br>`13:56:30:852` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:852` |   	&emsp;Value: `[10, 10]`, 
+<br>`13:56:30:852` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:56:30:852` | 
+<br>`13:56:30:852` |   **`[3]`** Iterating List/Tuple:
+<br>`13:56:30:852` |   	&emsp;List/Tuple *(`obj`)*: `[10, 10]`
+<br>`13:56:30:852` |   	&emsp;Element: `10`
+<br>`13:56:30:852` | 
+<br>`13:56:30:852` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:852` |   	&emsp;Value: `10`, 
+<br>`13:56:30:852` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:852` | 
+<br>`13:56:30:853` |   **`[3]`** Iterability test:
+<br>`13:56:30:853` |   	&emsp;**Params:**
+<br>`13:56:30:853` |   	&emsp;	&emsp;Value: `10`
+<br>`13:56:30:853` |   	&emsp;	&emsp;@Type: `<class 'int'>`
+<br>`13:56:30:853` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:56:30:853` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:56:30:853` |   	&emsp;**Final Resoult**: `False`
+<br>`13:56:30:853` | 
+<br>`13:56:30:853` |   **`[3]`** Iterating List/Tuple:
+<br>`13:56:30:853` |   	&emsp;List/Tuple *(`obj`)*: `[10, 10]`
+<br>`13:56:30:853` |   	&emsp;Element: `10`
+<br>`13:56:30:853` | 
+<br>`13:56:30:853` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:853` |   	&emsp;Value: `10`, 
+<br>`13:56:30:853` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:853` | 
+<br>`13:56:30:853` |   **`[3]`** Iterability test:
+<br>`13:56:30:853` |   	&emsp;**Params:**
+<br>`13:56:30:853` |   	&emsp;	&emsp;Value: `10`
+<br>`13:56:30:853` |   	&emsp;	&emsp;@Type: `<class 'int'>`
+<br>`13:56:30:853` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:56:30:853` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:56:30:853` |   	&emsp;**Final Resoult**: `False`
+<br>`13:56:30:853` | 
+<br>`13:56:30:853` | 
+<br>`13:56:30:853` | **`========== [Early End: 3 - Caller: 2] List Serialized ==========`**
+<br>`13:56:30:853` | 
+<br>`13:56:30:853` | 
+<br>`13:56:30:853` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:853` |   	&emsp;Value: `test`, 
+<br>`13:56:30:853` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:56:30:853` | 
+<br>`13:56:30:853` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:853` |   	&emsp;Value: `test`, 
+<br>`13:56:30:853` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:56:30:853` | 
+<br>`13:56:30:854` |   **`[2]`** **New dict created:**
+<br>`13:56:30:854` |   	&emsp;`{'param': {'test': [10, 10]}, 'PYON_TYPE': 'test'}`
+<br>`13:56:30:854` | 
+<br>`13:56:30:854` | 
+<br>`13:56:30:854` | **`===================== [End: 2 - Caller: 1] =====================`**
+<br>`13:56:30:854` | 
+<br>`13:56:30:854` | 
+<br>`13:56:30:854` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:854` |   	&emsp;Value: `asd`, 
+<br>`13:56:30:854` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:56:30:854` | 
+<br>`13:56:30:854` |   **`[1]`** Iterability test:
+<br>`13:56:30:854` |   	&emsp;**Params:**
+<br>`13:56:30:854` |   	&emsp;	&emsp;Value: `asd`
+<br>`13:56:30:854` |   	&emsp;	&emsp;@Type: `<class 'str'>`
+<br>`13:56:30:854` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:56:30:854` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:56:30:854` |   	&emsp;**Final Resoult**: `False`
+<br>`13:56:30:854` | 
+<br>`13:56:30:854` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:854` |   	&emsp;Value: `[{'param': {'test': [10, 10]}, 'PYON_TYPE': 'test'}, 'asd']`, 
+<br>`13:56:30:854` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:56:30:854` | 
+<br>`13:56:30:854` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:854` |   	&emsp;Value: `test`, 
+<br>`13:56:30:854` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:56:30:854` | 
+<br>`13:56:30:855` |   **`[TypeCheck]`** Checking Type 
+<br>`13:56:30:855` |   	&emsp;Value: `test`, 
+<br>`13:56:30:855` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:56:30:855` | 
+<br>`13:56:30:855` |   **`[1]`** **New dict created:**
+<br>`13:56:30:855` |   	&emsp;`{'param': [{'param': {'test': [10, 10]}, 'PYON_TYPE': 'test'}, 'asd'], 'PYON_TYPE': 'test'}`
+<br>`13:56:30:855` | 
+<br>`13:56:30:856` | 
+<br>`13:56:30:856` | **`=========================== [End: 1] ===========================`**
+<br>`13:56:30:856` | 
+<br>`13:56:30:856` | 
+<br>`13:57:24:892` | 
+<br>`13:57:24:892` | **`======================= [Deep Serialize] =======================`**
+<br>`13:57:24:892` | 
+<br>`13:57:24:892` | 
+<br>`13:57:24:893` | 
+<br>`13:57:24:893` | **`========================== [Start: 1] ==========================`**
+<br>`13:57:24:893` | 
+<br>`13:57:24:893` | 
+<br>`13:57:24:894` |   **`[1]`** Original obj input:
+<br>`13:57:24:894` |   	&emsp;`test(param=[test(param={'test': (10, 10)}), 'asd'])`
+<br>`13:57:24:894` | 
+<br>`13:57:24:894` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:894` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:57:24:894` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:894` | 
+<br>`13:57:24:895` |   **`[1]`** Iterability test:
+<br>`13:57:24:895` |   	&emsp;**Params:**
+<br>`13:57:24:895` |   	&emsp;	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`
+<br>`13:57:24:895` |   	&emsp;	&emsp;@Type: `<class 'databank.test'>`
+<br>`13:57:24:895` |   	&emsp;Is object *(`__is_object`)*: `True`
+<br>`13:57:24:895` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:57:24:895` |   	&emsp;**Final Resoult**: `True`
+<br>`13:57:24:895` | 
+<br>`13:57:24:895` |   **`[1]`** Original Obj Iterability *(can be `False`)*:
+<br>`13:57:24:895` |   	&emsp;Object *(`obj`)*: `test(param=[test(param={'test': (10, 10)}), 'asd'])` 
+<br>`13:57:24:895` |   	&emsp;**Is object iterable**: `True`
+<br>`13:57:24:895` | 
+<br>`13:57:24:895` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:895` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:57:24:895` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:895` | 
+<br>`13:57:24:896` |   **`[1]`** Iterability test:
+<br>`13:57:24:896` |   	&emsp;**Params:**
+<br>`13:57:24:896` |   	&emsp;	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`
+<br>`13:57:24:896` |   	&emsp;	&emsp;@Type: `<class 'databank.test'>`
+<br>`13:57:24:896` |   	&emsp;Is object *(`__is_object`)*: `True`
+<br>`13:57:24:896` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:57:24:896` |   	&emsp;**Final Resoult**: `True`
+<br>`13:57:24:896` | 
+<br>`13:57:24:896` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:896` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:57:24:896` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:57:24:896` | 
+<br>`13:57:24:896` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:896` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:57:24:896` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:57:24:896` | 
+<br>`13:57:24:896` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:896` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:57:24:896` |   	&emsp;Type(s): `<class 'tuple'>`
+<br>`13:57:24:896` | 
+<br>`13:57:24:896` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:896` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:57:24:896` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:57:24:896` | 
+<br>`13:57:24:896` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:896` |   	&emsp;Value: `[test(param={'test': (10, 10)}), 'asd']`, 
+<br>`13:57:24:896` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:57:24:896` | 
+<br>`13:57:24:897` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:897` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:57:24:897` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:897` | 
+<br>`13:57:24:897` |   **`[1]`** Iterability test:
+<br>`13:57:24:897` |   	&emsp;**Params:**
+<br>`13:57:24:897` |   	&emsp;	&emsp;Value: `test(param={'test': (10, 10)})`
+<br>`13:57:24:897` |   	&emsp;	&emsp;@Type: `<class 'databank.test'>`
+<br>`13:57:24:897` |   	&emsp;Is object *(`__is_object`)*: `True`
+<br>`13:57:24:897` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:57:24:897` |   	&emsp;**Final Resoult**: `True`
+<br>`13:57:24:897` | 
+<br>`13:57:24:897` | 
+<br>`13:57:24:897` | **`================= [Deep Serialize - Caller: 1] =================`**
+<br>`13:57:24:897` | 
+<br>`13:57:24:897` | 
+<br>`13:57:24:897` | 
+<br>`13:57:24:897` | **`==================== [Start: 2 - Caller: 1] ====================`**
+<br>`13:57:24:897` | 
+<br>`13:57:24:897` | 
+<br>`13:57:24:897` |   **`[2]`** Original obj input:
+<br>`13:57:24:897` |   	&emsp;`test(param={'test': (10, 10)})`
+<br>`13:57:24:897` | 
+<br>`13:57:24:897` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:897` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:57:24:897` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:897` | 
+<br>`13:57:24:897` |   **`[2]`** Iterability test:
+<br>`13:57:24:897` |   	&emsp;**Params:**
+<br>`13:57:24:897` |   	&emsp;	&emsp;Value: `test(param={'test': (10, 10)})`
+<br>`13:57:24:897` |   	&emsp;	&emsp;@Type: `<class 'databank.test'>`
+<br>`13:57:24:897` |   	&emsp;Is object *(`__is_object`)*: `True`
+<br>`13:57:24:897` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:57:24:897` |   	&emsp;**Final Resoult**: `True`
+<br>`13:57:24:897` | 
+<br>`13:57:24:898` |   **`[2]`** Original Obj Iterability *(can be `False`)*:
+<br>`13:57:24:898` |   	&emsp;Object *(`obj`)*: `test(param={'test': (10, 10)})` 
+<br>`13:57:24:898` |   	&emsp;**Is object iterable**: `True`
+<br>`13:57:24:898` | 
+<br>`13:57:24:898` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:898` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:57:24:898` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:898` | 
+<br>`13:57:24:898` |   **`[2]`** Iterability test:
+<br>`13:57:24:898` |   	&emsp;**Params:**
+<br>`13:57:24:898` |   	&emsp;	&emsp;Value: `test(param={'test': (10, 10)})`
+<br>`13:57:24:898` |   	&emsp;	&emsp;@Type: `<class 'databank.test'>`
+<br>`13:57:24:898` |   	&emsp;Is object *(`__is_object`)*: `True`
+<br>`13:57:24:898` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:57:24:898` |   	&emsp;**Final Resoult**: `True`
+<br>`13:57:24:898` | 
+<br>`13:57:24:898` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:898` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:57:24:898` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:57:24:898` | 
+<br>`13:57:24:898` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:898` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:57:24:898` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:57:24:898` | 
+<br>`13:57:24:898` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:898` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:57:24:898` |   	&emsp;Type(s): `<class 'tuple'>`
+<br>`13:57:24:898` | 
+<br>`13:57:24:899` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:899` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:57:24:899` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:57:24:899` | 
+<br>`13:57:24:899` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:899` |   	&emsp;Value: `{'test': (10, 10)}`, 
+<br>`13:57:24:899` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:57:24:899` | 
+<br>`13:57:24:899` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:899` |   	&emsp;Value: `{'test': (10, 10)}`, 
+<br>`13:57:24:899` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:57:24:899` | 
+<br>`13:57:24:899` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:899` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:57:24:899` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:899` | 
+<br>`13:57:24:899` |   **`[2]`** Iterability test:
+<br>`13:57:24:899` |   	&emsp;**Params:**
+<br>`13:57:24:899` |   	&emsp;	&emsp;Value: `(10, 10)`
+<br>`13:57:24:899` |   	&emsp;	&emsp;@Type: `<class 'tuple'>`
+<br>`13:57:24:899` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:57:24:899` |   	&emsp;Is dict/list/tuple *(`test1`)*: `True`
+<br>`13:57:24:899` |   	&emsp;**Final Resoult**: `True`
+<br>`13:57:24:899` | 
+<br>`13:57:24:900` | 
+<br>`13:57:24:900` | **`================= [Deep Serialize - Caller: 2] =================`**
+<br>`13:57:24:900` | 
+<br>`13:57:24:900` | 
+<br>`13:57:24:900` | 
+<br>`13:57:24:900` | **`==================== [Start: 3 - Caller: 2] ====================`**
+<br>`13:57:24:900` | 
+<br>`13:57:24:900` | 
+<br>`13:57:24:900` |   **`[3]`** Original obj input:
+<br>`13:57:24:900` |   	&emsp;`(10, 10)`
+<br>`13:57:24:900` | 
+<br>`13:57:24:900` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:900` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:57:24:900` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:900` | 
+<br>`13:57:24:900` |   **`[3]`** Iterability test:
+<br>`13:57:24:900` |   	&emsp;**Params:**
+<br>`13:57:24:900` |   	&emsp;	&emsp;Value: `(10, 10)`
+<br>`13:57:24:900` |   	&emsp;	&emsp;@Type: `<class 'tuple'>`
+<br>`13:57:24:900` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:57:24:900` |   	&emsp;Is dict/list/tuple *(`test1`)*: `True`
+<br>`13:57:24:900` |   	&emsp;**Final Resoult**: `True`
+<br>`13:57:24:900` | 
+<br>`13:57:24:901` |   **`[3]`** Original Obj Iterability *(can be `False`)*:
+<br>`13:57:24:901` |   	&emsp;Object *(`obj`)*: `(10, 10)` 
+<br>`13:57:24:901` |   	&emsp;**Is object iterable**: `True`
+<br>`13:57:24:901` | 
+<br>`13:57:24:901` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:901` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:57:24:901` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:901` | 
+<br>`13:57:24:901` |   **`[3]`** Iterability test:
+<br>`13:57:24:901` |   	&emsp;**Params:**
+<br>`13:57:24:901` |   	&emsp;	&emsp;Value: `(10, 10)`
+<br>`13:57:24:901` |   	&emsp;	&emsp;@Type: `<class 'tuple'>`
+<br>`13:57:24:901` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:57:24:901` |   	&emsp;Is dict/list/tuple *(`test1`)*: `True`
+<br>`13:57:24:901` |   	&emsp;**Final Resoult**: `True`
+<br>`13:57:24:901` | 
+<br>`13:57:24:901` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:901` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:57:24:901` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:57:24:901` | 
+<br>`13:57:24:901` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:901` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:57:24:901` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:57:24:901` | 
+<br>`13:57:24:901` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:901` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:57:24:901` |   	&emsp;Type(s): `<class 'tuple'>`
+<br>`13:57:24:901` | 
+<br>`13:57:24:901` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:901` |   	&emsp;Value: `[10, 10]`, 
+<br>`13:57:24:901` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:57:24:901` | 
+<br>`13:57:24:901` |   **`[3]`** Iterating List/Tuple:
+<br>`13:57:24:901` |   	&emsp;List/Tuple *(`obj`)*: `[10, 10]`
+<br>`13:57:24:901` |   	&emsp;Element: `10`
+<br>`13:57:24:901` | 
+<br>`13:57:24:902` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:902` |   	&emsp;Value: `10`, 
+<br>`13:57:24:902` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:902` | 
+<br>`13:57:24:902` |   **`[3]`** Iterability test:
+<br>`13:57:24:902` |   	&emsp;**Params:**
+<br>`13:57:24:902` |   	&emsp;	&emsp;Value: `10`
+<br>`13:57:24:902` |   	&emsp;	&emsp;@Type: `<class 'int'>`
+<br>`13:57:24:902` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:57:24:902` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:57:24:902` |   	&emsp;**Final Resoult**: `False`
+<br>`13:57:24:902` | 
+<br>`13:57:24:902` |   **`[3]`** Iterating List/Tuple:
+<br>`13:57:24:902` |   	&emsp;List/Tuple *(`obj`)*: `[10, 10]`
+<br>`13:57:24:902` |   	&emsp;Element: `10`
+<br>`13:57:24:902` | 
+<br>`13:57:24:902` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:902` |   	&emsp;Value: `10`, 
+<br>`13:57:24:902` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:902` | 
+<br>`13:57:24:902` |   **`[3]`** Iterability test:
+<br>`13:57:24:902` |   	&emsp;**Params:**
+<br>`13:57:24:902` |   	&emsp;	&emsp;Value: `10`
+<br>`13:57:24:902` |   	&emsp;	&emsp;@Type: `<class 'int'>`
+<br>`13:57:24:902` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:57:24:902` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:57:24:902` |   	&emsp;**Final Resoult**: `False`
+<br>`13:57:24:902` | 
+<br>`13:57:24:902` | 
+<br>`13:57:24:902` | **`========== [Early End: 3 - Caller: 2] List Serialized ==========`**
+<br>`13:57:24:902` | 
+<br>`13:57:24:902` | 
+<br>`13:57:24:903` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:903` |   	&emsp;Value: `test`, 
+<br>`13:57:24:903` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:57:24:903` | 
+<br>`13:57:24:903` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:903` |   	&emsp;Value: `test`, 
+<br>`13:57:24:903` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:57:24:903` | 
+<br>`13:57:24:903` |   **`[2]`** **New dict created:**
+<br>`13:57:24:903` |   	&emsp;`{'param': {'test': [10, 10]}, 'PYON_TYPE': 'test'}`
+<br>`13:57:24:903` | 
+<br>`13:57:24:903` | 
+<br>`13:57:24:903` | **`===================== [End: 2 - Caller: 1] =====================`**
+<br>`13:57:24:903` | 
+<br>`13:57:24:903` | 
+<br>`13:57:24:903` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:903` |   	&emsp;Value: `asd`, 
+<br>`13:57:24:903` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:903` | 
+<br>`13:57:24:903` |   **`[1]`** Iterability test:
+<br>`13:57:24:903` |   	&emsp;**Params:**
+<br>`13:57:24:903` |   	&emsp;	&emsp;Value: `asd`
+<br>`13:57:24:903` |   	&emsp;	&emsp;@Type: `<class 'str'>`
+<br>`13:57:24:903` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:57:24:903` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:57:24:903` |   	&emsp;**Final Resoult**: `False`
+<br>`13:57:24:903` | 
+<br>`13:57:24:903` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:903` |   	&emsp;Value: `[{'param': {'test': [10, 10]}, 'PYON_TYPE': 'test'}, 'asd']`, 
+<br>`13:57:24:903` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:57:24:903` | 
+<br>`13:57:24:903` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:903` |   	&emsp;Value: `test`, 
+<br>`13:57:24:903` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:57:24:903` | 
+<br>`13:57:24:903` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:903` |   	&emsp;Value: `test`, 
+<br>`13:57:24:903` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:57:24:903` | 
+<br>`13:57:24:904` |   **`[1]`** **New dict created:**
+<br>`13:57:24:904` |   	&emsp;`{'param': [{'param': {'test': [10, 10]}, 'PYON_TYPE': 'test'}, 'asd'], 'PYON_TYPE': 'test'}`
+<br>`13:57:24:904` | 
+<br>`13:57:24:904` | 
+<br>`13:57:24:904` | **`=========================== [End: 1] ===========================`**
+<br>`13:57:24:904` | 
+<br>`13:57:24:904` | 
+<br>`13:57:24:904` | 
+<br>`13:57:24:904` | **`======================= [Deep Serialize] =======================`**
+<br>`13:57:24:904` | 
+<br>`13:57:24:904` | 
+<br>`13:57:24:904` | 
+<br>`13:57:24:904` | **`========================== [Start: 1] ==========================`**
+<br>`13:57:24:904` | 
+<br>`13:57:24:904` | 
+<br>`13:57:24:904` |   **`[1]`** Original obj input:
+<br>`13:57:24:904` |   	&emsp;`test(param=[test(param={'test': (10, 10)}), 'asd'])`
+<br>`13:57:24:904` | 
+<br>`13:57:24:904` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:904` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:57:24:904` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:904` | 
+<br>`13:57:24:904` |   **`[1]`** Iterability test:
+<br>`13:57:24:904` |   	&emsp;**Params:**
+<br>`13:57:24:904` |   	&emsp;	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`
+<br>`13:57:24:904` |   	&emsp;	&emsp;@Type: `<class 'databank.test'>`
+<br>`13:57:24:904` |   	&emsp;Is object *(`__is_object`)*: `True`
+<br>`13:57:24:904` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:57:24:904` |   	&emsp;**Final Resoult**: `True`
+<br>`13:57:24:904` | 
+<br>`13:57:24:905` |   **`[1]`** Original Obj Iterability *(can be `False`)*:
+<br>`13:57:24:905` |   	&emsp;Object *(`obj`)*: `test(param=[test(param={'test': (10, 10)}), 'asd'])` 
+<br>`13:57:24:905` |   	&emsp;**Is object iterable**: `True`
+<br>`13:57:24:905` | 
+<br>`13:57:24:905` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:905` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:57:24:905` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:905` | 
+<br>`13:57:24:905` |   **`[1]`** Iterability test:
+<br>`13:57:24:905` |   	&emsp;**Params:**
+<br>`13:57:24:905` |   	&emsp;	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`
+<br>`13:57:24:905` |   	&emsp;	&emsp;@Type: `<class 'databank.test'>`
+<br>`13:57:24:905` |   	&emsp;Is object *(`__is_object`)*: `True`
+<br>`13:57:24:905` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:57:24:905` |   	&emsp;**Final Resoult**: `True`
+<br>`13:57:24:905` | 
+<br>`13:57:24:905` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:905` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:57:24:905` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:57:24:905` | 
+<br>`13:57:24:905` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:905` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:57:24:905` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:57:24:905` | 
+<br>`13:57:24:905` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:905` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:57:24:905` |   	&emsp;Type(s): `<class 'tuple'>`
+<br>`13:57:24:905` | 
+<br>`13:57:24:905` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:905` |   	&emsp;Value: `test(param=[test(param={'test': (10, 10)}), 'asd'])`, 
+<br>`13:57:24:905` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:57:24:905` | 
+<br>`13:57:24:905` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:905` |   	&emsp;Value: `[test(param={'test': (10, 10)}), 'asd']`, 
+<br>`13:57:24:905` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:57:24:905` | 
+<br>`13:57:24:906` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:906` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:57:24:906` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:906` | 
+<br>`13:57:24:906` |   **`[1]`** Iterability test:
+<br>`13:57:24:906` |   	&emsp;**Params:**
+<br>`13:57:24:906` |   	&emsp;	&emsp;Value: `test(param={'test': (10, 10)})`
+<br>`13:57:24:906` |   	&emsp;	&emsp;@Type: `<class 'databank.test'>`
+<br>`13:57:24:906` |   	&emsp;Is object *(`__is_object`)*: `True`
+<br>`13:57:24:906` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:57:24:906` |   	&emsp;**Final Resoult**: `True`
+<br>`13:57:24:906` | 
+<br>`13:57:24:906` | 
+<br>`13:57:24:906` | **`================= [Deep Serialize - Caller: 1] =================`**
+<br>`13:57:24:906` | 
+<br>`13:57:24:906` | 
+<br>`13:57:24:906` | 
+<br>`13:57:24:906` | **`==================== [Start: 2 - Caller: 1] ====================`**
+<br>`13:57:24:906` | 
+<br>`13:57:24:906` | 
+<br>`13:57:24:906` |   **`[2]`** Original obj input:
+<br>`13:57:24:906` |   	&emsp;`test(param={'test': (10, 10)})`
+<br>`13:57:24:906` | 
+<br>`13:57:24:906` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:906` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:57:24:906` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:906` | 
+<br>`13:57:24:906` |   **`[2]`** Iterability test:
+<br>`13:57:24:906` |   	&emsp;**Params:**
+<br>`13:57:24:906` |   	&emsp;	&emsp;Value: `test(param={'test': (10, 10)})`
+<br>`13:57:24:906` |   	&emsp;	&emsp;@Type: `<class 'databank.test'>`
+<br>`13:57:24:906` |   	&emsp;Is object *(`__is_object`)*: `True`
+<br>`13:57:24:906` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:57:24:906` |   	&emsp;**Final Resoult**: `True`
+<br>`13:57:24:906` | 
+<br>`13:57:24:907` |   **`[2]`** Original Obj Iterability *(can be `False`)*:
+<br>`13:57:24:907` |   	&emsp;Object *(`obj`)*: `test(param={'test': (10, 10)})` 
+<br>`13:57:24:907` |   	&emsp;**Is object iterable**: `True`
+<br>`13:57:24:907` | 
+<br>`13:57:24:907` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:907` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:57:24:907` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:907` | 
+<br>`13:57:24:907` |   **`[2]`** Iterability test:
+<br>`13:57:24:907` |   	&emsp;**Params:**
+<br>`13:57:24:907` |   	&emsp;	&emsp;Value: `test(param={'test': (10, 10)})`
+<br>`13:57:24:907` |   	&emsp;	&emsp;@Type: `<class 'databank.test'>`
+<br>`13:57:24:907` |   	&emsp;Is object *(`__is_object`)*: `True`
+<br>`13:57:24:907` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:57:24:907` |   	&emsp;**Final Resoult**: `True`
+<br>`13:57:24:907` | 
+<br>`13:57:24:907` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:907` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:57:24:907` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:57:24:907` | 
+<br>`13:57:24:907` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:907` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:57:24:907` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:57:24:907` | 
+<br>`13:57:24:907` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:907` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:57:24:907` |   	&emsp;Type(s): `<class 'tuple'>`
+<br>`13:57:24:907` | 
+<br>`13:57:24:907` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:907` |   	&emsp;Value: `test(param={'test': (10, 10)})`, 
+<br>`13:57:24:907` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:57:24:907` | 
+<br>`13:57:24:908` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:908` |   	&emsp;Value: `{'test': (10, 10)}`, 
+<br>`13:57:24:908` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:57:24:908` | 
+<br>`13:57:24:908` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:908` |   	&emsp;Value: `{'test': (10, 10)}`, 
+<br>`13:57:24:908` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:57:24:908` | 
+<br>`13:57:24:908` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:908` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:57:24:908` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:908` | 
+<br>`13:57:24:908` |   **`[2]`** Iterability test:
+<br>`13:57:24:908` |   	&emsp;**Params:**
+<br>`13:57:24:908` |   	&emsp;	&emsp;Value: `(10, 10)`
+<br>`13:57:24:908` |   	&emsp;	&emsp;@Type: `<class 'tuple'>`
+<br>`13:57:24:908` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:57:24:908` |   	&emsp;Is dict/list/tuple *(`test1`)*: `True`
+<br>`13:57:24:908` |   	&emsp;**Final Resoult**: `True`
+<br>`13:57:24:908` | 
+<br>`13:57:24:908` | 
+<br>`13:57:24:908` | **`================= [Deep Serialize - Caller: 2] =================`**
+<br>`13:57:24:908` | 
+<br>`13:57:24:908` | 
+<br>`13:57:24:908` | 
+<br>`13:57:24:908` | **`==================== [Start: 3 - Caller: 2] ====================`**
+<br>`13:57:24:908` | 
+<br>`13:57:24:908` | 
+<br>`13:57:24:909` |   **`[3]`** Original obj input:
+<br>`13:57:24:909` |   	&emsp;`(10, 10)`
+<br>`13:57:24:909` | 
+<br>`13:57:24:909` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:909` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:57:24:909` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:909` | 
+<br>`13:57:24:909` |   **`[3]`** Iterability test:
+<br>`13:57:24:909` |   	&emsp;**Params:**
+<br>`13:57:24:909` |   	&emsp;	&emsp;Value: `(10, 10)`
+<br>`13:57:24:909` |   	&emsp;	&emsp;@Type: `<class 'tuple'>`
+<br>`13:57:24:909` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:57:24:909` |   	&emsp;Is dict/list/tuple *(`test1`)*: `True`
+<br>`13:57:24:909` |   	&emsp;**Final Resoult**: `True`
+<br>`13:57:24:909` | 
+<br>`13:57:24:909` |   **`[3]`** Original Obj Iterability *(can be `False`)*:
+<br>`13:57:24:909` |   	&emsp;Object *(`obj`)*: `(10, 10)` 
+<br>`13:57:24:909` |   	&emsp;**Is object iterable**: `True`
+<br>`13:57:24:909` | 
+<br>`13:57:24:909` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:909` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:57:24:909` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:909` | 
+<br>`13:57:24:909` |   **`[3]`** Iterability test:
+<br>`13:57:24:909` |   	&emsp;**Params:**
+<br>`13:57:24:909` |   	&emsp;	&emsp;Value: `(10, 10)`
+<br>`13:57:24:909` |   	&emsp;	&emsp;@Type: `<class 'tuple'>`
+<br>`13:57:24:909` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:57:24:909` |   	&emsp;Is dict/list/tuple *(`test1`)*: `True`
+<br>`13:57:24:909` |   	&emsp;**Final Resoult**: `True`
+<br>`13:57:24:909` | 
+<br>`13:57:24:909` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:909` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:57:24:909` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:57:24:909` | 
+<br>`13:57:24:910` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:910` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:57:24:910` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:57:24:910` | 
+<br>`13:57:24:910` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:910` |   	&emsp;Value: `(10, 10)`, 
+<br>`13:57:24:910` |   	&emsp;Type(s): `<class 'tuple'>`
+<br>`13:57:24:910` | 
+<br>`13:57:24:910` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:910` |   	&emsp;Value: `[10, 10]`, 
+<br>`13:57:24:910` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:57:24:910` | 
+<br>`13:57:24:910` |   **`[3]`** Iterating List/Tuple:
+<br>`13:57:24:910` |   	&emsp;List/Tuple *(`obj`)*: `[10, 10]`
+<br>`13:57:24:910` |   	&emsp;Element: `10`
+<br>`13:57:24:910` | 
+<br>`13:57:24:910` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:910` |   	&emsp;Value: `10`, 
+<br>`13:57:24:910` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:910` | 
+<br>`13:57:24:910` |   **`[3]`** Iterability test:
+<br>`13:57:24:910` |   	&emsp;**Params:**
+<br>`13:57:24:910` |   	&emsp;	&emsp;Value: `10`
+<br>`13:57:24:910` |   	&emsp;	&emsp;@Type: `<class 'int'>`
+<br>`13:57:24:910` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:57:24:910` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:57:24:910` |   	&emsp;**Final Resoult**: `False`
+<br>`13:57:24:910` | 
+<br>`13:57:24:911` |   **`[3]`** Iterating List/Tuple:
+<br>`13:57:24:911` |   	&emsp;List/Tuple *(`obj`)*: `[10, 10]`
+<br>`13:57:24:911` |   	&emsp;Element: `10`
+<br>`13:57:24:911` | 
+<br>`13:57:24:911` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:911` |   	&emsp;Value: `10`, 
+<br>`13:57:24:911` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:911` | 
+<br>`13:57:24:911` |   **`[3]`** Iterability test:
+<br>`13:57:24:911` |   	&emsp;**Params:**
+<br>`13:57:24:911` |   	&emsp;	&emsp;Value: `10`
+<br>`13:57:24:911` |   	&emsp;	&emsp;@Type: `<class 'int'>`
+<br>`13:57:24:911` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:57:24:911` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:57:24:911` |   	&emsp;**Final Resoult**: `False`
+<br>`13:57:24:911` | 
+<br>`13:57:24:911` | 
+<br>`13:57:24:911` | **`========== [Early End: 3 - Caller: 2] List Serialized ==========`**
+<br>`13:57:24:911` | 
+<br>`13:57:24:911` | 
+<br>`13:57:24:911` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:911` |   	&emsp;Value: `test`, 
+<br>`13:57:24:911` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:57:24:911` | 
+<br>`13:57:24:911` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:911` |   	&emsp;Value: `test`, 
+<br>`13:57:24:911` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:57:24:911` | 
+<br>`13:57:24:911` |   **`[2]`** **New dict created:**
+<br>`13:57:24:911` |   	&emsp;`{'param': {'test': [10, 10]}, 'PYON_TYPE': 'test'}`
+<br>`13:57:24:911` | 
+<br>`13:57:24:912` | 
+<br>`13:57:24:912` | **`===================== [End: 2 - Caller: 1] =====================`**
+<br>`13:57:24:912` | 
+<br>`13:57:24:912` | 
+<br>`13:57:24:912` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:912` |   	&emsp;Value: `asd`, 
+<br>`13:57:24:912` |   	&emsp;Type(s): `(<class 'dict'>, <class 'list'>, <class 'tuple'>)`
+<br>`13:57:24:912` | 
+<br>`13:57:24:912` |   **`[1]`** Iterability test:
+<br>`13:57:24:912` |   	&emsp;**Params:**
+<br>`13:57:24:912` |   	&emsp;	&emsp;Value: `asd`
+<br>`13:57:24:912` |   	&emsp;	&emsp;@Type: `<class 'str'>`
+<br>`13:57:24:912` |   	&emsp;Is object *(`__is_object`)*: `False`
+<br>`13:57:24:912` |   	&emsp;Is dict/list/tuple *(`test1`)*: `False`
+<br>`13:57:24:912` |   	&emsp;**Final Resoult**: `False`
+<br>`13:57:24:912` | 
+<br>`13:57:24:912` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:912` |   	&emsp;Value: `[{'param': {'test': [10, 10]}, 'PYON_TYPE': 'test'}, 'asd']`, 
+<br>`13:57:24:912` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:57:24:912` | 
+<br>`13:57:24:912` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:912` |   	&emsp;Value: `test`, 
+<br>`13:57:24:912` |   	&emsp;Type(s): `<class 'list'>`
+<br>`13:57:24:912` | 
+<br>`13:57:24:912` |   **`[TypeCheck]`** Checking Type 
+<br>`13:57:24:912` |   	&emsp;Value: `test`, 
+<br>`13:57:24:912` |   	&emsp;Type(s): `<class 'dict'>`
+<br>`13:57:24:912` | 
+<br>`13:57:24:912` |   **`[1]`** **New dict created:**
+<br>`13:57:24:912` |   	&emsp;`{'param': [{'param': {'test': [10, 10]}, 'PYON_TYPE': 'test'}, 'asd'], 'PYON_TYPE': 'test'}`
+<br>`13:57:24:912` | 
+<br>`13:57:24:912` | 
+<br>`13:57:24:912` | **`=========================== [End: 1] ===========================`**
+<br>`13:57:24:912` | 
+<br>`13:57:24:912` | 

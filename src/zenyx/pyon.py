@@ -32,7 +32,7 @@ class debug:
             
             
     
-    debugger: debug_object or None = None
+    debugger: debug_object | None = None
     indent = 1
     
     @staticmethod
@@ -235,7 +235,7 @@ def deep_serialize(obj: any, *args, callbacktime:int = 0) -> dict:
         else:
             # it's a namedtuple
             new_dict = copy.deepcopy(obj)._asdict()
-        new_dict['PYON_TYPE'] = str(obj.__class__.__name__)
+        new_dict['@class'] = str(obj.__class__.__name__)
     
     if ((not hasattr(obj, "_asdict")) and is_type(obj, tuple)):
         obj = list(obj)
@@ -278,7 +278,7 @@ def deep_serialize(obj: any, *args, callbacktime:int = 0) -> dict:
 
 
 
-def deep_parse(olddict: dict or list, *args: str, callbacktime: int = 0) -> object or dict:
+def deep_parse(olddict: dict | list, *args: str, callbacktime: int = 0) -> object | dict:
     """
     #### WARNING: IT WILL NOT CONVERT ANY DICTIONARIES WHICH HAVE NOT BEEN SAVED WITH: "__object_to_dict"\n
     Converts the saved dictionary back to the original object
@@ -304,9 +304,9 @@ def deep_parse(olddict: dict or list, *args: str, callbacktime: int = 0) -> obje
     if is_type(olddict, list):
         olddict = {"&ORIGINAL_LIST" : olddict}
         
-    if olddict.get('PYON_TYPE'):
-        class_type = olddict["PYON_TYPE"]
-        olddict.pop("PYON_TYPE", None)
+    if olddict.get('@class'):
+        class_type = olddict["@class"]
+        olddict.pop("@class", None)
     else:
         class_type = "&DICT"
         
@@ -371,7 +371,7 @@ def dump_json(_json: str, data: str):
         json.dump(data, write_file, indent=4, ensure_ascii=False)
         write_file.write("\n")
 
-def dump(data: dict or list or object, file: str, indent: int = 4):
+def dump(data: dict | list | object, file: str, indent: int = 4):
     """Works the same as the json.dumps function, but exepts objects as data
     Args:
         data (dict or list or object): object or list or object, will be converted to a dict, and into a JSON
@@ -383,7 +383,7 @@ def dump(data: dict or list or object, file: str, indent: int = 4):
         json.dump(new_data, write_file, indent=indent, ensure_ascii=False)
         write_file.write("\n")
 
-def load(file: str) -> object or dict or list:
+def load(file: str) -> object | dict | list:
     """Loads the json file, and converts all the dictionaries which were objects
     Args:
         file (str): filepath 
@@ -394,7 +394,7 @@ def load(file: str) -> object or dict or list:
         loaddata = json.load(read_file)
         return deep_parse(loaddata)
 
-def dumps(data: object or dict or list) -> str:
+def dumps(data: object | dict | list) -> str:
     """Convert an object into a JSON saveable dict.
     #### THIS ALSO CONVERTS EVERY SUB-OBJECT
     Returns:
@@ -402,7 +402,7 @@ def dumps(data: object or dict or list) -> str:
     """
     return json.dumps(deep_serialize(data))
 
-def loads(data: str) -> object or dict or list:
+def loads(data: str) -> object | dict | list:
     """Convert the saved JSON string back into objects.
     Args:
         data (str): JSON data
