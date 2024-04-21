@@ -3,6 +3,7 @@ import datetime
 import json
 import copy
 from collections import namedtuple
+from recordclass import recordclass 
 from dataclasses import dataclass
 import re
 import os
@@ -336,7 +337,7 @@ def deep_parse(olddict: dict | list, *args: str, callbacktime: int = 0) -> objec
     
     if class_type != "&DICT":
         params["pyon_converted"] = True
-        new_object_initializer = namedtuple(class_type, list(params.keys()))
+        new_object_initializer = recordclass(class_type, ' '.join(list(params.keys())))
         new_object = new_object_initializer(*list(params.values()))
         
         __end(new_object)
