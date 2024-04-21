@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "zenyx"
-version = "2.2.0"
+version = "2.2.1"
 authors = [
   { name="zewenn", email="zc.fallens@gamil.com" },
 ]
@@ -20,3 +20,6 @@ classifiers = [
 [project.urls]
 Homepage = "https://github.com/zewenn/zenyx"
 Issues = "https://github.com/zewenn/zenyx/issues"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
