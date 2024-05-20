@@ -31,4 +31,4 @@ Includes the reset (`$&`) symbol \n
 from zenyx import pyon, require, streams
 from zenyx.console import printf
 from zenyx.args import Arguments
-
+from zenyx.pipe import Pipe

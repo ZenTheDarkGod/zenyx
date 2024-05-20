@@ -1,10 +1,10 @@
-
 import src.zenyx as zenyx
 import sys
 import tests.databank as db
 
 
 from result import *
+
 
 def unit(u: str) -> float:
     """
@@ -45,16 +45,25 @@ def unit(u: str) -> float:
         case "u":
             return num * 16
 
+
 def err():
     raise Exception("asdasd")
 
+
+def transf(lst: list[int]) -> list[str]:
+    return [str(x) for x in lst]
+
+
+def filter(lst: list[str]) -> list[str]:
+    return [x for x in lst if x == "10"]
+
+
 def test_one():
-    print(unit('50x'))
+    x = zenyx.Pipe([10, 20, 10])
+    x >> transf >> filter >> " ".join
+    x = x()
 
-    x = zenyx.std.attempt(err, [])
-
-    if x.is_err():
-        print(x.err())
+    print(x)
 
 
 test_one()
